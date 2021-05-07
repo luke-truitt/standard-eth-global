@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:ios.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:ios"
+      name = "ios">
+      <Group
+         location = "group:Assets.xcassets"
+         name = "Assets.xcassets">
+         <Group
+            location = "group:AppIcon.appiconset"
+            name = "AppIcon.appiconset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:AccentColor.colorset"
+            name = "AccentColor.colorset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:iosApp.swift">
+      </FileRef>
+      <Group
+         location = "group:Preview Content"
+         name = "Preview Content">
+         <Group
+            location = "group:Preview Assets.xcassets"
+            name = "Preview Assets.xcassets">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:ContentView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:iosTests"
+      name = "iosTests">
+      <FileRef
+         location = "group:iosTests.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:iosUITests"
+      name = "iosUITests">
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+      <FileRef
+         location = "group:iosUITests.swift">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Podfile">
+   </FileRef>
+   <FileRef
+      location = "group:Podfile.lock">
+   </FileRef>
+   <Group
+      location = "group:Pods"
+      name = "Pods">
+      <FileRef
+         location = "group:Pods.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:web3.swift"
+         name = "web3.swift">
+         <Group
+            location = "group:web3swift"
+            name = "web3swift">
+            <Group
+               location = "group:lib"
+               name = "lib">
+               <Group
+                  location = "group:keccak-tiny"
+                  name = "keccak-tiny">
+                  <Group
+                     location = "group:include"
+                     name = "include">
+                     <FileRef
+                        location = "group:keccak-tiny.h">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:module.map">
+                  </FileRef>
+                  <FileRef
+                     location = "group:keccak-tiny.c">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:aes"
+                  name = "aes">
+                  <FileRef
+                     location = "group:aes.c">
+                  </FileRef>
+                  <Group
+                     location = "group:include"
+                     name = "include">
+                     <FileRef
+                        location = "group:aes.h">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:module.map">
+                  </FileRef>
+               </Group>
+            </Group>
+            <Group
+               location = "group:src"
+               name = "src">
+               <Group
+                  location = "group:ENS"
+                  name = "ENS">
+                  <FileRef
+                     location = "group:ENSMultiResolver.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ENSContracts.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ENSResponses.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:EthereumNameService.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Contract"
+                  name = "Contract">
+                  <FileRef
+                     location = "group:ABIRawType.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ABIEncoder.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ABIDecoder.swift">
+                  </FileRef>
+                  <Group
+                     location = "group:JSON Definition"
+                     name = "JSON Definition">
+                     <FileRef
+                        location = "group:ABIRawType+JSON.swift">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Statically Typed"
+                     name = "Statically Typed">
+                     <FileRef
+                        location = "group:ABIFunction.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ABIDecoder+Static.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ABITuple.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ABIEncoder+Static.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ABIFunctionEncoder.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ABIEvent.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ABIRawType+Static.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:EthereumClient+Static.swift">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <Group
+                  location = "group:ERC20"
+                  name = "ERC20">
+                  <FileRef
+                     location = "group:ERC20Functions.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ERC20Events.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ERC20.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ERC20Responses.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Utils"
+                  name = "Utils">
+                  <FileRef
+                     location = "group:RLP.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:KeystoreUtil.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:HexUtil.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:KeyUtil.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:AesUtil.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:KeyDerivation.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Extensions"
+                  name = "Extensions">
+                  <FileRef
+                     location = "group:HexExtensions.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:String+Numeric.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Extensions.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Data+Random.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ByteExtensions.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:KeccakExtensions.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:ERC165"
+                  name = "ERC165">
+                  <FileRef
+                     location = "group:ERC165.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:ERC721"
+                  name = "ERC721">
+                  <FileRef
+                     location = "group:ERC721Responses.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ERC721.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ERC721Events.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ERC721Functions.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Account"
+                  name = "Account">
+                  <FileRef
+                     location = "group:EthereumAccount+SignTransaction.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:EthereumAccount.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:EthereumKeyStorage.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:TypedData.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Client"
+                  name = "Client">
+                  <FileRef
+                     location = "group:RecursiveLogCollector.swift">
+                  </FileRef>
+                  <Group
+                     location = "group:Models"
+                     name = "Models">
+                     <FileRef
+                        location = "group:EthereumTransactionReceipt.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:EthereumAddress.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:EthereumBlockInfo.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:EthereumBlock.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:EthereumLog.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:EthereumNetwork.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:EthereumTransaction.swift">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:EthereumClient.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:JSONRPC.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Multicall"
+                  name = "Multicall">
+                  <FileRef
+                     location = "group:MulticallContract.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Multicall.swift">
+                  </FileRef>
+               </Group>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:LICENSE">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:BigInt"
+         name = "BigInt">
+         <FileRef
+            location = "group:LICENSE.md">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <Group
+            location = "group:Sources"
+            name = "Sources">
+            <FileRef
+               location = "group:Random.swift">
+            </FileRef>
+            <FileRef
+               location = "group:GCD.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Hashable.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Strideable.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Addition.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Data Conversion.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Bitwise Ops.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Comparable.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Words and Bits.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Square Root.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Division.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Prime Test.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Codable.swift">
+            </FileRef>
+            <FileRef
+               location = "group:BigUInt.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Multiplication.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Exponentiation.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Floating Point Conversion.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Shifts.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Subtraction.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Integer Conversion.swift">
+            </FileRef>
+            <FileRef
+               location = "group:BigInt.swift">
+            </FileRef>
+            <FileRef
+               location = "group:String Conversion.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Target Support Files"
+         name = "Target Support Files">
+         <Group
+            location = "group:Pods-iosTests"
+            name = "Pods-iosTests">
+            <FileRef
+               location = "group:Pods-iosTests-acknowledgements.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-iosTests-acknowledgements.markdown">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-iosTests-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-iosTests.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-iosTests-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-iosTests.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-iosTests-umbrella.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-iosTests.debug.xcconfig">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:web3.swift"
+            name = "web3.swift">
+            <FileRef
+               location = "group:web3.swift.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:web3.swift-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:web3.swift.debug.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:web3.swift.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:web3.swift-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:web3.swift-umbrella.h">
+            </FileRef>
+            <FileRef
+               location = "group:web3.swift-prefix.pch">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:BigInt"
+            name = "BigInt">
+            <FileRef
+               location = "group:BigInt-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:BigInt.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:BigInt-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:BigInt.debug.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:BigInt-umbrella.h">
+            </FileRef>
+            <FileRef
+               location = "group:BigInt.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:BigInt-prefix.pch">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods-ios"
+            name = "Pods-ios">
+            <FileRef
+               location = "group:Pods-ios.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-acknowledgements.markdown">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-frameworks-Debug-input-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-frameworks-Debug-output-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-frameworks.sh">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios.debug.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-umbrella.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-acknowledgements.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-frameworks-Release-output-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-frameworks-Release-input-files.xcfilelist">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:GenericJSON"
+            name = "GenericJSON">
+            <FileRef
+               location = "group:GenericJSON-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:GenericJSON.debug.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:GenericJSON.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:GenericJSON-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:GenericJSON.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:GenericJSON-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:GenericJSON-umbrella.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods-ios-iosUITests"
+            name = "Pods-ios-iosUITests">
+            <FileRef
+               location = "group:Pods-ios-iosUITests-acknowledgements.markdown">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests-frameworks-Release-input-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests-umbrella.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests-frameworks.sh">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests-frameworks-Debug-input-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests-acknowledgements.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests-frameworks-Debug-output-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests-frameworks-Release-output-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-ios-iosUITests.debug.xcconfig">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:secp256k1.swift"
+            name = "secp256k1.swift">
+            <FileRef
+               location = "group:secp256k1.swift-umbrella.h">
+            </FileRef>
+            <FileRef
+               location = "group:secp256k1.swift.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:secp256k1.swift-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:secp256k1.swift-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:secp256k1.swift.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:secp256k1.swift.debug.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:secp256k1.swift-Info.plist">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:Manifest.lock">
+      </FileRef>
+      <Group
+         location = "group:Local Podspecs"
+         name = "Local Podspecs">
+      </Group>
+      <Group
+         location = "group:GenericJSON"
+         name = "GenericJSON">
+         <FileRef
+            location = "group:LICENSE">
+         </FileRef>
+         <Group
+            location = "group:GenericJSON"
+            name = "GenericJSON">
+            <FileRef
+               location = "group:Initialization.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Querying.swift">
+            </FileRef>
+            <FileRef
+               location = "group:JSON.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Merging.swift">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Headers"
+         name = "Headers">
+      </Group>
+      <Group
+         location = "group:secp256k1.swift"
+         name = "secp256k1.swift">
+         <FileRef
+            location = "group:LICENSE">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <Group
+            location = "group:secp256k1"
+            name = "secp256k1">
+            <Group
+               location = "group:Classes"
+               name = "Classes">
+               <FileRef
+                  location = "group:secp256k1-config.h">
+               </FileRef>
+               <FileRef
+                  location = "group:secp256k1_ec_mult_static_context.h">
+               </FileRef>
+               <Group
+                  location = "group:secp256k1"
+                  name = "secp256k1">
+                  <Group
+                     location = "group:include"
+                     name = "include">
+                     <FileRef
+                        location = "group:secp256k1_ecdh.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:secp256k1_recovery.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:secp256k1.h">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:contrib"
+                     name = "contrib">
+                     <FileRef
+                        location = "group:lax_der_parsing.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:lax_der_privatekey_parsing.c">
+                     </FileRef>
+                     <FileRef
+                        location = "group:lax_der_parsing.c">
+                     </FileRef>
+                     <FileRef
+                        location = "group:lax_der_privatekey_parsing.h">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:src"
+                     name = "src">
+                     <FileRef
+                        location = "group:scalar_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:field_10x26_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:scratch.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ecmult_gen_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:field_10x26.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:scalar_8x32_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:field_5x52.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:num_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:field.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:field_5x52_asm_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:field_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:scalar_4x64.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:basic-config.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:num.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:field_5x52_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ecmult_const_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:secp256k1.c">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ecdsa.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:scalar.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ecdsa_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ecmult_gen.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:scalar_low_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:hash_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ecmult.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:scratch_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ecmult_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:group.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:util.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:field_5x52_int128_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:scalar_4x64_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:group_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ecmult_const.h">
+                     </FileRef>
+                     <Group
+                        location = "group:modules"
+                        name = "modules">
+                        <Group
+                           location = "group:recovery"
+                           name = "recovery">
+                           <FileRef
+                              location = "group:main_impl.h">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:ecdh"
+                           name = "ecdh">
+                           <FileRef
+                              location = "group:main_impl.h">
+                           </FileRef>
+                        </Group>
+                     </Group>
+                     <FileRef
+                        location = "group:num_gmp.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:hash.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:eckey_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:num_gmp_impl.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:scalar_8x32.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:scalar_low.h">
+                     </FileRef>
+                     <FileRef
+                        location = "group:eckey.h">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <FileRef
+                  location = "group:secp256k1_main.h">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
