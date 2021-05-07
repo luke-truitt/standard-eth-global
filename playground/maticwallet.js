@@ -15,10 +15,10 @@ wallet = Wallet.fromMnemonic(mnemonic);
 wallet2 = Wallet.fromMnemonic(mnemonic);
 const recipient = wallet2.address;
 
-// const recipient = '"0x8ba1f109551bD432803012645Ac136ddd64DBA72"';
-// const token = config.MUMBAI_ERC20; // test token address
-// // const token = config.MUMBAI_WETH
-// const amount = "1000000000000000000"; // amount in wei
+const recipient = '"0x8ba1f109551bD432803012645Ac136ddd64DBA72"';
+const token = config.MUMBAI_ERC20; // test token address
+// const token = config.MUMBAI_WETH
+const amount = "1000000000000000000"; // amount in wei
 
 // matic.initialize().then(() => {
 //   matic.setWallet(wallet.privateKey);
