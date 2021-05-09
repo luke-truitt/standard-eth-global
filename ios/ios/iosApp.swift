@@ -29,8 +29,8 @@ struct iosApp: App {
 
         print("\(String(describing: client!.session))");
         print("\(String(describing: client!.network))");
-        client?.eth_gasPrice(completion: { (error, currentPrice) in
-            print(error)
+client?.eth_gasPrice(completion: { (error, currentPrice) in
+print(error)
             print("The current gas price is \(String(describing: currentPrice))")
         })
         client?.eth_blockNumber(completion: { (error, block) in
