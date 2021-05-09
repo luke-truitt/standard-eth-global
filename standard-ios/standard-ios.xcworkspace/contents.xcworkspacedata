@@ -1,0 +1,2619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:standard-ios.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Podfile">
+   </FileRef>
+   <FileRef
+      location = "group:Podfile.lock">
+   </FileRef>
+   <Group
+      location = "group:Pods"
+      name = "Pods">
+      <FileRef
+         location = "group:Pods.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:Target Support Files"
+         name = "Target Support Files">
+         <Group
+            location = "group:Pods-standard-ios-standard-iosUITests"
+            name = "Pods-standard-ios-standard-iosUITests">
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-frameworks-Release-input-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-acknowledgements.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-acknowledgements.markdown">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-frameworks-Debug-input-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-frameworks-Release-output-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-frameworks-Debug-output-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests.debug.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-umbrella.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-frameworks.sh">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-standard-iosUITests-dummy.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods-standard-ios"
+            name = "Pods-standard-ios">
+            <FileRef
+               location = "group:Pods-standard-ios.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-frameworks-Debug-output-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-frameworks.sh">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-frameworks-Release-output-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-frameworks-Release-input-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-umbrella.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-frameworks-Debug-input-files.xcfilelist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios.debug.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-acknowledgements.markdown">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-ios-acknowledgements.plist">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods-standard-iosTests"
+            name = "Pods-standard-iosTests">
+            <FileRef
+               location = "group:Pods-standard-iosTests-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-iosTests-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-iosTests-acknowledgements.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-iosTests-acknowledgements.markdown">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-iosTests.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-iosTests.debug.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-iosTests.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods-standard-iosTests-umbrella.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Stripe"
+            name = "Stripe">
+            <FileRef
+               location = "group:Stripe-umbrella.h">
+            </FileRef>
+            <FileRef
+               location = "group:ResourceBundle-Stripe3DS2-Stripe-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Stripe.release.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Stripe.debug.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Stripe-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Stripe-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:Stripe.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Stripe-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:ResourceBundle-Stripe-Stripe-Info.plist">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:Manifest.lock">
+      </FileRef>
+      <Group
+         location = "group:Local Podspecs"
+         name = "Local Podspecs">
+      </Group>
+      <Group
+         location = "group:Headers"
+         name = "Headers">
+      </Group>
+      <Group
+         location = "group:Stripe"
+         name = "Stripe">
+         <FileRef
+            location = "group:LICENSE">
+         </FileRef>
+         <Group
+            location = "group:Stripe3DS2"
+            name = "Stripe3DS2">
+            <Group
+               location = "group:Stripe3DS2"
+               name = "Stripe3DS2">
+               <FileRef
+                  location = "group:STDSSecTypeUtilities.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDeviceInformationParameter.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NSString+EmptyChecking.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSTransaction+Private.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSOSVersionChecker.m">
+               </FileRef>
+               <FileRef
+                  location = "group:UIViewController+Stripe3DS2.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSimulatorChecker.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSBrandingView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseMessageExtension.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSTextFieldCustomization.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDeviceInformationManager.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDirectoryServerCertificate.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NSData+JWEHelpers.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSConfigParameters.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSImageLoader.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeParameters.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSACSNetworkingManager.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSJSONWebEncryption.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSEllipticCurvePoint.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDebuggerChecker.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSelectionButton.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NSString+JWEHelpers.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseSelectionInfo.h">
+               </FileRef>
+               <FileRef
+                  location = "group:Stripe3DS2-Bridging-Header.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSBundleLocator.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSpacerView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSLabelCustomization.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSThreeDSProtocolVersion+Private.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSelectionCustomization.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSThreeDSProtocolVersion.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSThreeDS2Service.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeRequestParameters.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSException.m">
+               </FileRef>
+               <FileRef
+                  location = "group:UIFont+DefaultFonts.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSWebView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeSelectionView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSWhitelistView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDeviceInformation.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSJSONWebSignature.h">
+               </FileRef>
+               <FileRef
+                  location = "group:UIColor+DefaultColors.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSNavigationBarCustomization.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSJailbreakChecker.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSStackView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseViewController.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseImage.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSAlreadyInitializedException.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseMessageExtensionObject.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NSLayoutConstraint+LayoutSupport.m">
+               </FileRef>
+               <FileRef
+                  location = "group:UIView+LayoutSupport.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSExpandableInformationView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSynchronousLocationManager.h">
+               </FileRef>
+               <Group
+                  location = "group:include"
+                  name = "include">
+                  <FileRef
+                     location = "group:STDSCustomization.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSUICustomization.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSJSONEncoder.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSNotInitializedException.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSJSONEncodable.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSInvalidInputException.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSRuntimeException.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSWarning.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSChallengeStatusReceiver.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSAuthenticationRequestParameters.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSFooterCustomization.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSProtocolErrorEvent.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSJSONDecodable.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSButtonCustomization.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSTransaction.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSCompletionEvent.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Stripe3DS2.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSChallengeParameters.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSConfigParameters.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSTextFieldCustomization.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSNavigationBarCustomization.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSException.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSThreeDS2Service.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSThreeDSProtocolVersion.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSSelectionCustomization.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSLabelCustomization.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSAuthenticationResponse.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSAlreadyInitializedException.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSErrorMessage.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSSwiftTryCatch.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSRuntimeErrorEvent.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:STDSStripe3DS2Error.h">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:UIColor+ThirteenSupport.h">
+               </FileRef>
+               <Group
+                  location = "group:Resources"
+                  name = "Resources">
+                  <Group
+                     location = "group:de.lproj"
+                     name = "de.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:zh-Hans.lproj"
+                     name = "zh-Hans.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:ja.lproj"
+                     name = "ja.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:en.lproj"
+                     name = "en.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:zh-HK.lproj"
+                     name = "zh-HK.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:mt.lproj"
+                     name = "mt.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:nb.lproj"
+                     name = "nb.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:en-GB.lproj"
+                     name = "en-GB.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:es.lproj"
+                     name = "es.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:da.lproj"
+                     name = "da.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:es-419.lproj"
+                     name = "es-419.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Images"
+                     name = "Images">
+                     <FileRef
+                        location = "group:error@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:mastercard-logo@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:visa-white-logo@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:discover-logo.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Chevron@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:visa-logo@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:amex-logo@3x.png">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:it.lproj"
+                     name = "it.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:nn-NO.lproj"
+                     name = "nn-NO.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:fr-CA.lproj"
+                     name = "fr-CA.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:sv.lproj"
+                     name = "sv.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:ko.lproj"
+                     name = "ko.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:zh-Hant.lproj"
+                     name = "zh-Hant.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:hu.lproj"
+                     name = "hu.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:tr.lproj"
+                     name = "tr.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:pt-BR.lproj"
+                     name = "pt-BR.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:ru.lproj"
+                     name = "ru.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:fr.lproj"
+                     name = "fr.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:fi.lproj"
+                     name = "fi.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:nl.lproj"
+                     name = "nl.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:pt-PT.lproj"
+                     name = "pt-PT.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <FileRef
+                  location = "group:STDSTextChallengeView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSIPAddress.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseSelectionInfoObject.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NSDictionary+DecodingHelpers.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseImageObject.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSErrorMessage+Internal.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseObject.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NSError+Stripe3DS2.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSCategoryLinker.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSIntegrityChecker.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSAuthenticationResponseObject.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSLocalizedString.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSProcessingView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSEphemeralKeyPair.h">
+               </FileRef>
+               <FileRef
+                  location = "group:UIButton+CustomInitialization.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSStripe3DS2Error.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeInformationView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSRuntimeErrorEvent.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSProgressViewController.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSwiftTryCatch.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSErrorMessage.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSJSONWebEncryption.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSACSNetworkingManager.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSEllipticCurvePoint.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSRuntimeException.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDirectoryServerCertificate+Internal.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NSData+JWEHelpers.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDirectoryServerCertificate.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSImageLoader.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponse.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDeviceInformationManager.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSInvalidInputException.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSimulatorChecker.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSBrandingView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:UIViewController+Stripe3DS2.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSOSVersionChecker.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSNotInitializedException.m">
+               </FileRef>
+               <FileRef
+                  location = "group:NSString+EmptyChecking.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSJSONEncoder.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSUICustomization.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSEphemeralKeyPair+Testing.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDeviceInformationParameter.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSCustomization.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSecTypeUtilities.m">
+               </FileRef>
+               <FileRef
+                  location = "group:UIColor+DefaultColors.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSJailbreakChecker.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSJSONWebSignature.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDeviceInformation.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSWhitelistView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:UIFont+DefaultFonts.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeSelectionView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSWebView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeRequestParameters.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDirectoryServer.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSAuthenticationRequestParameters.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSpacerView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSBundleLocator.m">
+               </FileRef>
+               <FileRef
+                  location = "group:NSString+JWEHelpers.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSWarning.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDebuggerChecker.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSelectionButton.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSTextChallengeView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSIPAddress.m">
+               </FileRef>
+               <FileRef
+                  location = "group:UIColor+ThirteenSupport.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSProtocolErrorEvent.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSSynchronousLocationManager.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSExpandableInformationView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:UIView+LayoutSupport.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NSLayoutConstraint+LayoutSupport.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSFooterCustomization.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseMessageExtensionObject.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSStackView.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseViewController.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSDeviceInformationParameter+Private.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeInformationView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSProgressViewController.h">
+               </FileRef>
+               <FileRef
+                  location = "group:UIButton+CustomInitialization.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSEphemeralKeyPair.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSProcessingView.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSCompletionEvent.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSButtonCustomization.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSTransaction.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSAuthenticationResponseObject.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSCategoryLinker.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSIntegrityChecker.h">
+               </FileRef>
+               <FileRef
+                  location = "group:NSError+Stripe3DS2.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseObject.m">
+               </FileRef>
+               <FileRef
+                  location = "group:NSDictionary+DecodingHelpers.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSErrorMessage+Internal.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseImageObject.m">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSException+Internal.h">
+               </FileRef>
+               <FileRef
+                  location = "group:STDSChallengeResponseSelectionInfoObject.m">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <Group
+            location = "group:Stripe"
+            name = "Stripe">
+            <FileRef
+               location = "group:UITableViewCell+Stripe_Borders.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPMultiFormTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodBLIK.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPInputFormColors.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentHandler.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPInputTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodGrabPayParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBlocks.swift">
+            </FileRef>
+            <FileRef
+               location = "group:BackwardsCompatibleColors.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodiDEAL.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentOptionsViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPStackViewWithSeparator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSectionHeaderView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodFPXParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodBancontactParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NSBundle+Stripe_AppName.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodBacsDebitParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentContext.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPInputTextFieldValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPConnectAccountParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodThreeDSecureUsage.swift">
+            </FileRef>
+            <FileRef
+               location = "group:SavedPaymentOptionsViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPImageLibrary.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardScanner.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAPIResponseDecodable.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPushProvisioningContext.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCoreViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAnalyticEvent.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentLastPaymentError.swift">
+            </FileRef>
+            <FileRef
+               location = "group:CheckboxButton.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPinManagementService.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentSheetFlowController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodAfterpayClearpay.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentOption.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodGiropayParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPostalCodeInputTextFieldValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentShippingDetailsAddress.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIButton+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodOXXOParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIFont+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPIntentAction.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPUserInformation.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceCardDetails.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPLocalizedString.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPThreeDSSelectionCustomization.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPApplePayPaymentOption.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentContextAmountModel.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPromise.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodUPIParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodUPI.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPGenericInputPickerField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSetupIntentEnums.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceRedirect.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPConfirmBLIKOptions.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentOptionTableViewCell.swift">
+            </FileRef>
+            <FileRef
+               location = "group:SheetNavigationBar.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSetupIntent.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceProtocol.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NSDecimalNumber+Stripe_Currency.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPNumericStringValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Analytic.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPGenericInputTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceReceiver.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPConfirmPaymentMethodOptions.swift">
+            </FileRef>
+            <FileRef
+               location = "group:StripeAPI.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodPayPalParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodSofort.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceWeChatPayDetails.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardBrand.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPIssuingCardPin.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIToolbar+Stripe_InputAccessory.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBECSDebitAccountNumberValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFloatingPlaceholderTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodPrzelewy24.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPLabeledMultiFormTextFieldView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentOptionTuple.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentCardTextField+SwiftUI.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentConfirmation+SwiftUI.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardNumberInputTextFieldValidator.swift">
+            </FileRef>
+            <Group
+               location = "group:PanModal"
+               name = "PanModal">
+               <Group
+                  location = "group:Presentable"
+                  name = "Presentable">
+                  <FileRef
+                     location = "group:PanModalPresentable+Defaults.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:PanModalPresentable.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:PanModalPresentable+LayoutHelpers.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:PanModalHeight.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:PanModalPresentable+UIViewController.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Presenter"
+                  name = "Presenter">
+                  <FileRef
+                     location = "group:UIViewController+PanModalPresenter.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:PanModalPresenter.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Delegate"
+                  name = "Delegate">
+                  <FileRef
+                     location = "group:PanModalPresentationDelegate.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Animator"
+                  name = "Animator">
+                  <FileRef
+                     location = "group:PanModalAnimator.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:PanModalPresentationAnimator.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Controller"
+                  name = "Controller">
+                  <FileRef
+                     location = "group:PanModalPresentationController.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:View"
+                  name = "View">
+                  <FileRef
+                     location = "group:PanContainerView.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:DimmedView.swift">
+                  </FileRef>
+               </Group>
+            </Group>
+            <FileRef
+               location = "group:BottomSheetViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPNumericDigitInputTextFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardValidationState.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPThreeDSUICustomization.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCard.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardScannerTableViewCell.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardExpiryInputTextFieldFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:ShadowedRoundedRectangleView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPMultipartFormDataPart.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPApplePayContext.swift">
+            </FileRef>
+            <Group
+               location = "group:Resources"
+               name = "Resources">
+               <FileRef
+                  location = "group:au_becs_bsb.json">
+               </FileRef>
+               <Group
+                  location = "group:Images"
+                  name = "Images">
+                  <FileRef
+                     location = "group:stp_icon_bank@3x.png">
+                  </FileRef>
+                  <Group
+                     location = "group:Cards"
+                     name = "Cards">
+                     <FileRef
+                        location = "group:stp_card_error_amex@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_visa_template@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_form_back@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_unknown@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_amex@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_amex_template@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_diners_template@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_diners@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_cvc_amex@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_discover@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_error@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_jcb_template@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_jcb@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_form_amex_cvc@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_cvc@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_form_front@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_visa@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_applepay@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_unionpay_zh@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_unionpay_en@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_mastercard_template@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_unionpay_template_zh@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_unionpay_template_en@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_mastercard@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_card_discover_template@3x.png">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:FPX"
+                     name = "FPX">
+                     <FileRef
+                        location = "group:stp_bank_fpx_ocbc@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_rhb@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_bsn@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_hong_leong_bank@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_fpx_logo@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_standard_chartered@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_bank_islam@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_fpx_big_logo@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_cimb@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_public_bank@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_alliance_bank@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_hsbc@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_affin_bank@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_maybank2u@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_kfh@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_bank_muamalat@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_uob@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_ambank@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_maybank2e@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stp_bank_fpx_bank_rakyat@3x.png">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:PaymentMethods"
+                     name = "PaymentMethods">
+                     <FileRef
+                        location = "group:icon-pm-ideal@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:icon-pm-card@3x.png">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Cardsv2"
+                     name = "Cardsv2">
+                     <FileRef
+                        location = "group:card_unknown_icon_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_diners@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_discover_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_unionpay_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_mastercard_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_diners_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_unionpay@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_amex@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_jcb_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_visa_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_unknown_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_cvc_icon@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_unknown@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_jcb@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_cvc_icon_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_discover@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_amex_dark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_mastercard@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_visa@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:card_unknown_icon@3x.png">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:PaymentSheet"
+                     name = "PaymentSheet">
+                     <FileRef
+                        location = "group:icon_x@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:icon_lock@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:icon_plus@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:icon_checkmark@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:icon_chevron_left@3x.png">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:form_error_icon_dark@3x.png">
+                  </FileRef>
+                  <Group
+                     location = "group:BECS"
+                     name = "BECS">
+                     <FileRef
+                        location = "group:anz@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nab@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stgeorges@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:westpac@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:bankwest@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:suncorpmetway@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:boq@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:bankofmelbourne@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:stripe@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:banksa@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:cba@3x.png">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:stp_icon_add@3x.png">
+                  </FileRef>
+                  <FileRef
+                     location = "group:chevronDown@3x.png">
+                  </FileRef>
+                  <FileRef
+                     location = "group:apple_pay_mark@3x.png">
+                  </FileRef>
+                  <FileRef
+                     location = "group:stp_icon_checkmark@3x.png">
+                  </FileRef>
+                  <FileRef
+                     location = "group:stp_shipping_form@3x.png">
+                  </FileRef>
+                  <FileRef
+                     location = "group:form_error_icon@3x.png">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Localizations"
+                  name = "Localizations">
+                  <Group
+                     location = "group:de.lproj"
+                     name = "de.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:zh-Hans.lproj"
+                     name = "zh-Hans.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:ja.lproj"
+                     name = "ja.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:en.lproj"
+                     name = "en.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:zh-HK.lproj"
+                     name = "zh-HK.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:mt.lproj"
+                     name = "mt.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:nb.lproj"
+                     name = "nb.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:en-GB.lproj"
+                     name = "en-GB.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:es.lproj"
+                     name = "es.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:da.lproj"
+                     name = "da.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:es-419.lproj"
+                     name = "es-419.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:it.lproj"
+                     name = "it.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:nn-NO.lproj"
+                     name = "nn-NO.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:fr-CA.lproj"
+                     name = "fr-CA.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:sv.lproj"
+                     name = "sv.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:ko.lproj"
+                     name = "ko.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:zh-Hant.lproj"
+                     name = "zh-Hant.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:hu.lproj"
+                     name = "hu.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:tr.lproj"
+                     name = "tr.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:pt-BR.lproj"
+                     name = "pt-BR.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:ru.lproj"
+                     name = "ru.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:fr.lproj"
+                     name = "fr.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:fi.lproj"
+                     name = "fi.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:nl.lproj"
+                     name = "nl.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:pt-PT.lproj"
+                     name = "pt-PT.lproj">
+                     <FileRef
+                        location = "group:Localizable.strings">
+                     </FileRef>
+                  </Group>
+               </Group>
+            </Group>
+            <FileRef
+               location = "group:STPPaymentMethodAlipayParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPToken.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentSheet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPThreeDSTextFieldCustomization.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UISpringTimingParameters+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPThreeDSNavigationBarCustomization.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSetupIntentConfirmParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPTheme.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentCardTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFPXBankStatusResponse.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardNumberInputTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodFPX.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceOwner.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPShippingAddressViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentShippingDetails.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodCardChecks.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NSArray+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFormView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPostalCodeInputTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentActivityIndicatorView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPShippingMethodsViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPIntentActionRedirectToURL.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardLoadingIndicator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentConfiguration.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIView+Helpers.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentShippingDetailsAddressParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodBancontact.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPApplePayContext+PaymentSheet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentEnums.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFPXBankBrand.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodCardParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPMandateCustomerAcceptanceParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PKAddPaymentPassRequest+Stripe_Error.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodAUBECSDebit.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPiDEALBankPickerInputField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPIntentActionAlipayHandleRedirect.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPLabeledFormTextFieldView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UINavigationController+Stripe_Completion.swift">
+            </FileRef>
+            <FileRef
+               location = "group:CardScanningView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STP3DS2AuthenticateResponse.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodAddress.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardCVCInputTextFieldValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentAction.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPThreeDSButtonCustomization.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAuthenticationContext.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSource.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UINavigationBar+Stripe_Theme.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAnalyticsClient+PaymentSheet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodPrzelewy24Params.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBINRange.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAddressViewModel.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPMandateDataParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPTelemetryClient.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBackendAPIAdapter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentSheetError.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NSError+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSetupIntentLastSetupError.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIImage+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NSMutableURLRequest+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentResult.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentCardTextFieldViewModel.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardCVCInputTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:DefaultPaymentMethodStore.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodOXXO.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentShippingDetailsParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IdealDetailsEditView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFakeAddPaymentPassViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPURLCallbackHandler.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCoreScrollViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodEPS.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardExpiryInputTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentSheet+SwiftUI.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIViewController+Stripe_KeyboardAvoiding.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardFormView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAddCardViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodCardPresent.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCountryPickerInputField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodPayPal.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodEnums.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPEphemeralKey.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentSheet+Helpers.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBankSelectionViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodListDeserializer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardCVCInputTextFieldFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIViewController+Stripe_ParentViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodBLIKParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPushProvisioningDetailsParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAddressFieldTableViewCell.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPDispatchFunctions.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPiDEALFormView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodGrabPay.swift">
+            </FileRef>
+            <FileRef
+               location = "group:BottomSheet3DS2ViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPConfirmAlipayOptions.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPStringUtils.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Events.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentCardTextFieldCell.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceSEPADebitDetails.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPThreeDSCustomizationSettings.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFormTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:AlipayDetailsEditView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPushProvisioningDetails.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAddress.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPInternalAPIResponseDecodable.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPThreeDSLabelCustomization.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Async.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodiDEALParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPostalCodeValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentMethodTypeCollectionView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIColor+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPEphemeralKeyManager.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPError.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentHandlerActionParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardExpiryInputTextFieldValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPIntentActionUseStripeSDK.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodSEPADebit.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardNumberInputTextFieldFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPEmptyStripeResponse.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFormEncoder.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAPIClient+ApplePay.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIBarButtonItem+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethod.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAPIClient.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPViewWithSeparator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCustomer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFile.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPKlarnaLineItem.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPMultipartFormDataEncoder.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFormTextFieldContainer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPFormEncodable.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentSheetConfiguration.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodCardWalletVisaCheckout.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentOptionsInternalViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBundleLocator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:ChoosePaymentOptionViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPLocalizationUtils.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBankSelectionTableViewCell.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPConnectAccountIndividualParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PKPayment+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodCardNetworks.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourcePoller.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodNetBanking.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodBillingDetails.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceEnums.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPShippingMethodTableViewCell.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodCard.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PKPaymentAuthorizationViewController+Stripe_Blocks.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentSheetViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPThreeDSFooterCustomization.swift">
+            </FileRef>
+            <FileRef
+               location = "group:CircularButton.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBankAccount.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodAlipay.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPContactField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentSheetViewControllerViews.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPConnectAccountAddress.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodSEPADebitParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:PaymentOption+Images.swift">
+            </FileRef>
+            <FileRef
+               location = "group:APIRequest.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentSourceAction.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAUBECSFormViewModel.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntent.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPConfirmCardOptions.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NSCharacterSet+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPRedirectContext.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodNetBankingParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIView+Stripe_FirstResponder.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPValidatedTextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceKlarnaDetails.swift">
+            </FileRef>
+            <FileRef
+               location = "group:SavedPaymentMethodCollectionView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentActionRedirectToURL.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPiDEALBank.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPColorUtils.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCameraView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPostalCodeInputTextFieldFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAnalyticsClient.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCustomerContext.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodAfterpayClearpayParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:CardDetailsEditView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIKit+PaymentSheet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPIntentActionOXXODisplayDetails.swift">
+            </FileRef>
+            <FileRef
+               location = "group:BillingAddressEditView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:URLSession+Retry.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPhoneNumberValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodEPSParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCoreTableViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodCardWallet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPSourceVerification.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBSBNumberValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodAUBECSDebitParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPInputTextFieldFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodGiropay.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPMandateOnlineParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPEmailAddressValidator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:ConfirmButton.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPBankAccountParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIViewController+Stripe_NavigationItemProxy.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAUBECSDebitFormView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPCardBINMetadata.swift">
+            </FileRef>
+            <FileRef
+               location = "group:LoadingViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentIntentSourceActionAuthorizeWithURL.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NSURLComponents+Stripe.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPEphemeralKeyProvider.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodCardWalletMasterpass.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAppInfo.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPAPIClient+PushProvisioning.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodBacsDebit.swift">
+            </FileRef>
+            <FileRef
+               location = "group:UIView+Stripe_SafeAreaBounds.swift">
+            </FileRef>
+            <FileRef
+               location = "group:AddPaymentMethodViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPPaymentMethodSofortParams.swift">
+            </FileRef>
+            <FileRef
+               location = "group:STPConnectAccountCompanyParams.swift">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <Group
+      location = "group:standard-ios"
+      name = "standard-ios">
+      <FileRef
+         location = "group:standard_iosApp.swift">
+      </FileRef>
+      <Group
+         location = "group:/Users/Goon/Desktop/standard/standard-eth-global/standard-ios/standard-ios/View"
+         name = "View">
+         <FileRef
+            location = "group:BankAccountsView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:EnterAmountView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:/Users/Goon/Desktop/standard/standard-eth-global/standard-ios/standard-ios/View/OnboardingView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:WalletView.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Model">
+         <FileRef
+            location = "group:User.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Wallet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:WalletEvent.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Assets.xcassets"
+         name = "Assets.xcassets">
+         <Group
+            location = "group:AppIcon.appiconset"
+            name = "AppIcon.appiconset">
+            <FileRef
+               location = "group:1024.png">
+            </FileRef>
+            <FileRef
+               location = "group:76.png">
+            </FileRef>
+            <FileRef
+               location = "group:60.png">
+            </FileRef>
+            <FileRef
+               location = "group:167.png">
+            </FileRef>
+            <FileRef
+               location = "group:120-1.png">
+            </FileRef>
+            <FileRef
+               location = "group:29.png">
+            </FileRef>
+            <FileRef
+               location = "group:120.png">
+            </FileRef>
+            <FileRef
+               location = "group:40-1.png">
+            </FileRef>
+            <FileRef
+               location = "group:80-1.png">
+            </FileRef>
+            <FileRef
+               location = "group:20.png">
+            </FileRef>
+            <FileRef
+               location = "group:40-2.png">
+            </FileRef>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+            <FileRef
+               location = "group:58-3.png">
+            </FileRef>
+            <FileRef
+               location = "group:180.png">
+            </FileRef>
+            <FileRef
+               location = "group:80.png">
+            </FileRef>
+            <FileRef
+               location = "group:58-2.png">
+            </FileRef>
+            <FileRef
+               location = "group:40.png">
+            </FileRef>
+            <FileRef
+               location = "group:87.png">
+            </FileRef>
+            <FileRef
+               location = "group:152.png">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:AccentColor.colorset"
+            name = "AccentColor.colorset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Coin"
+            name = "Coin">
+            <Group
+               location = "group:DAI.imageset"
+               name = "DAI.imageset">
+               <FileRef
+                  location = "group:DAI.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:TUSD.imageset"
+               name = "TUSD.imageset">
+               <FileRef
+                  location = "group:TUSD.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:/Users/Goon/Desktop/standard/standard-eth-global/standard-ios/standard-ios/Assets.xcassets/Coin/Contents.json">
+            </FileRef>
+            <Group
+               location = "group:USDC.imageset"
+               name = "USDC.imageset">
+               <FileRef
+                  location = "group:USDC.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:BTC.imageset"
+               name = "BTC.imageset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+               <FileRef
+                  location = "group:BTC.png">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:ETH.imageset"
+               name = "ETH.imageset">
+               <FileRef
+                  location = "group:ETH.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Preview Content"
+         name = "Preview Content">
+         <Group
+            location = "group:Preview Assets.xcassets"
+            name = "Preview Assets.xcassets">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:styles"
+         name = "styles">
+         <FileRef
+            location = "group:Styles.swift">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:standard-iosTests"
+      name = "standard-iosTests">
+      <FileRef
+         location = "group:standard_iosTests.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:standard-iosUITests"
+      name = "standard-iosUITests">
+      <FileRef
+         location = "group:standard_iosUITests.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

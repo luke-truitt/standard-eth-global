@@ -39,6 +39,16 @@ struct iosApp: App {
         client!.eth_gasPrice(completion: {(error, price) in
             let usePrice = price! * 100
             print(usePrice)
+        print("\(String(describing: client!.session))");
+        print("\(String(describing: client!.network))");
+client?.eth_gasPrice(completion: { (error, currentPrice) in
+print(error)
+            print("The current gas price is \(String(describing: currentPrice))")
+        })
+        client?.eth_blockNumber(completion: { (error, block) in
+            print(error?.localizedDescription)
+            print("The current block no  is \(String(describing: block))")
+
             do {
                 let function = Deposit(asset: tokenAddress, amount: 100, onBehalfOf: userAddress, referralCode: 0, gasPrice: usePrice, gasLimit: BigUInt(5000000))
                 let transaction = try function.transaction()
