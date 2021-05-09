@@ -9,93 +9,92 @@
 import Foundation
 import BigInt
 
-extension ABIFunction {
-    public func decode(_ data: Data, expectedTypes: [ABIType.Type]) throws -> [ABIDecoder.DecodedValue] {
-        let encoder = ABIFunctionEncoder(Self.name)
-        try encode(to: encoder)
-        let rawTypes = encoder.types
-        let methodId = String(hexFromBytes: try ABIFunctionEncoder.methodId(name: Self.name, types: rawTypes))
-        var raw = data.web3.hexString
-        
-        guard raw.hasPrefix(methodId) else {
-            throw ABIError.invalidSignature
-        }
-        raw = raw.replacingOccurrences(of: methodId, with: "")
-        let decoded = try ABIDecoder.decodeData(raw, types: expectedTypes)
-        let empty = decoded.flatMap { $0.entry.filter(\.isEmpty) }
-        guard
-            empty.count == 0,
-            decoded.count == expectedTypes.count else {
-            throw ABIError.invalidSignature
-        }
-        
-        return decoded
-    }
-}
-
 public class ABIFunctionEncoder {
     private let name: String
-    private (set) var types: [ABIRawType] = []
+    private var head = [UInt8]()
+    private var tail = [UInt8]()
+    private var types: [ABIRawType] = []
     
-    public func encode(_ value: ABIType, staticSize: Int? = nil) throws {
-        let rawType = type(of: value).rawType
-        let encoded = try ABIEncoder.encode(value, staticSize: staticSize)
-        
-        encodedValues.append(encoded)
-        switch (staticSize, rawType) {
-        case (let size?, .DynamicBytes):
-            guard size <= 32 else {
-                throw ABIError.invalidType
-            }
-            types.append(.FixedBytes(size))
-        case (let size?, .FixedUInt):
-            guard size <= 256 else {
-                throw ABIError.invalidType
-            }
-            types.append(.FixedUInt(size))
-        case (let size?, .FixedInt):
-            guard size <= 256 else {
-                throw ABIError.invalidType
-            }
-            types.append(.FixedInt(size))
-        default:
-            types.append(rawType)
+    public func encode(_ value: String) throws {
+        let strValue = value
+        guard let type = ABIRawType(type: String.self) else { throw ABIError.invalidType }
+        return try self.encode(type: type, value: strValue)
+    }
+    
+    public func encode(_ value: Bool) throws {
+        let strValue = value ? "true" : "false"
+        guard let type = ABIRawType(type: Bool.self) else { throw ABIError.invalidType }
+        return try self.encode(type: type, value: strValue)
+    }
+    
+    public func encode(_ value: EthereumAddress) throws {
+        let strValue = value.value
+        guard let type = ABIRawType(type: EthereumAddress.self) else { throw ABIError.invalidType }
+        return try self.encode(type: type, value: strValue)
+    }
+    
+    public func encode(_ value: BigInt) throws {
+        let strValue = String(value)
+        guard let type = ABIRawType(type: BigInt.self) else { throw ABIError.invalidType }
+        return try self.encode(type: type, value: strValue)
+    }
+    
+    public func encode(_ value: BigUInt) throws {
+        let strValue = String(value)
+        guard let type = ABIRawType(type: BigUInt.self) else { throw ABIError.invalidType }
+        return try self.encode(type: type, value: strValue)
+    }
+    
+    public func encode(_ value: Data) throws {
+        let strValue = String(bytes: value.bytes)
+        guard let type = ABIRawType(type: Data.self) else { throw ABIError.invalidType }
+        return try self.encode(type: type, value: strValue)
+    }
+    
+    public func encode(_ value: Data, size: ABIFixedSizeDataType.Type) throws {
+        let strValue = String(bytes: value.bytes)
+        guard let type = ABIRawType(type: size) else { throw ABIError.invalidType }
+        return try self.encode(type: type, value: strValue)
+    }
+    
+    public func encode(_ value: [Data], size: ABIFixedSizeDataType.Type) throws {
+        let strValue = String(bytes: value.flatMap { $0 })
+        guard let containedType = ABIRawType(type: size) else { throw ABIError.invalidType }
+        let type: ABIRawType = .DynamicArray(containedType)
+        return try self.encode(type: type, value: strValue)
+    }
+    
+    public func encode(_ value: [EthereumAddress]) throws {
+        guard let type = ABIRawType(type: [EthereumAddress].self) else {
+            throw ABIError.invalidType
         }
+        let bytes = try value.flatMap { try ABIEncoder.encode($0) }
+        return try self.encode(type: type, value: String(hexFromBytes: bytes), size: value.count)
     }
-    
-    public func encode<T: ABIType>(_ values: [T], staticSize: Int? = nil) throws {
-        let encoded = try ABIEncoder.encode(values, staticSize: staticSize)
-        encodedValues.append(encoded)
-        types.append(.DynamicArray(T.rawType))
-    }
-    
-    internal var encodedValues = [ABIEncoder.EncodedValue]()
 
-    public init(_ name: String) {
+    private func encode(type: ABIRawType, value: String, size: Int = 1) throws {
+        let result = try ABIEncoder.encode(value, forType: type, size: size)
+
+        if type.isDynamic {
+            let pos = 32 + self.types.count*32 + tail.count
+            head += try ABIEncoder.encode(String(pos), forType: ABIRawType.FixedInt(256))
+            tail += result
+        } else {
+            head += result
+        }
+        
+        self.types.append(type)
+    }
+    
+    init(_ name: String) {
         self.name = name
     }
     
-    public func encoded() throws -> Data {
-        let methodId = try Self.methodId(name: name, types: types)
-        let allBytes = methodId + (try encodedValues.encoded(isDynamic: false))
-        return Data(allBytes)
+    func encoded() throws -> Data {
+        let sig = try ABIEncoder.signature(name: name, types: types)
+        let methodId = Array(sig.prefix(4))
+        let allBytes = methodId + head + tail
+        return Data(bytes: allBytes)
     }
     
-    static func signature(name: String, types: [ABIRawType]) throws -> [UInt8] {
-        let typeNames = types.map { $0.rawValue }
-        let signature = name + "(" + typeNames.joined(separator: ",") + ")"
-        guard let data = signature.data(using: .utf8) else { throw ABIError.invalidSignature }
-        return data.web3.keccak256.web3.bytes
-    }
-    
-    static func signature(name: String, types: [ABIType.Type]) throws -> [UInt8] {
-        let rawTypes = types.map { $0.rawType }
-        return try signature(name: name, types: rawTypes)
-    }
-    
-    static func methodId(name: String, types: [ABIRawType]) throws -> [UInt8] {
-        let signature = try Self.signature(name: name, types: types)
-        return Array(signature.prefix(4))
-    }
-
 }

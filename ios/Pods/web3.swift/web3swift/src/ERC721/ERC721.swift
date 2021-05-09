@@ -34,7 +34,7 @@ public class ERC721: ERC165 {
                                  fromBlock: EthereumBlock,
                                  toBlock: EthereumBlock,
                                  completion: @escaping((Error?, [ERC721Events.Transfer]?) -> Void)) {
-        guard let result = try? ABIEncoder.encode(recipient).bytes, let sig = try? ERC721Events.Transfer.signature() else {
+        guard let addressType = ABIRawType(type: EthereumAddress.self), let result = try? ABIEncoder.encode(recipient.value, forType: addressType), let sig = try? ERC721Events.Transfer.signature() else {
             completion(EthereumSignerError.unknownError, nil)
             return
         }
@@ -141,7 +141,7 @@ public class ERC721Metadata: ERC721 {
         let function = ERC721MetadataFunctions.tokenURI(contract: contract,
                                                         tokenID: tokenID)
         function.call(withClient: client, responseType: ERC721MetadataResponses.tokenURIResponse.self) { error, response in
-            return completion(error, response?.value)
+            return completion(error, response?.uri)
         }
     }
     

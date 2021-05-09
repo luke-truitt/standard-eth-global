@@ -10,8 +10,7 @@
 #endif
 #endif
 
-#import "aes.h"
-#import "keccak-tiny.h"
+#import "web3swift.h"
 
 FOUNDATION_EXPORT double web3VersionNumber;
 FOUNDATION_EXPORT const unsigned char web3VersionString[];

@@ -9,39 +9,40 @@
 import Foundation
 import BigInt
 
-public enum ERC20Responses {
-    public struct nameResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ String.self ]
-        public let value: String
+enum ERC20Responses {
+    struct nameResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ String.self ]
+        let value: String
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.value = try values[0].decoded()
         }
     }
     
-    public struct symbolResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ String.self ]
-        public let value: String
+    struct symbolResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ String.self ]
+        let value: String
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.value = try values[0].decoded()
         }
     }
     
-    public struct decimalsResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ UInt8.self ]
-        public let value: UInt8
+    struct decimalsResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ BigUInt.self ]
+        let value: BigUInt
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.value = try values[0].decoded()
         }
     }
-
-    public struct balanceResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ BigUInt.self ]
-        public let value: BigUInt
+    
+    
+    struct balanceResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ BigUInt.self ]
+        let value: BigUInt
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.value = try values[0].decoded()
         }
     }

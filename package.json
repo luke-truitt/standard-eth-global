@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "dependencies": {
     "@aave/protocol-js": "^2.7.2",
     "@aave/protocol-v2": "^1.0.1",

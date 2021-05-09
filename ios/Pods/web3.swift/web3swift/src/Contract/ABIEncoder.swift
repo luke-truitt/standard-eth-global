@@ -10,88 +10,33 @@ import Foundation
 import BigInt
 
 public class ABIEncoder {
-    public enum EncodedValue {
-        case value(bytes: [UInt8], isDynamic: Bool, staticLength: Int)
-        indirect case container(values: [EncodedValue], isDynamic: Bool, size: Int?)
-        
-        public var bytes: [UInt8] {
-            switch self {
-            case .value(bytes: let encoded, _, _):
-                return encoded
-            case .container(let values, _, _):
-                return values.flatMap(\.bytes)
-            }
-        }
-        
-        var isDynamic: Bool {
-            switch self {
-            case .value(_, let isDynamic, _):
-                return isDynamic
-            case .container(_, let isDynamic, _):
-                return isDynamic
-            }
-        }
-        
-        var staticLength: Int {
-            switch self {
-            case .value(_, _, let staticLength):
-                return staticLength
-            case .container(let values, let isDynamic, let size):
-                if isDynamic {
-                    return 32
-                } else {
-                    return values.map(\.staticLength).reduce(0, +)
-                }
-            }
-        }
-        
-        public var hexString: String { String(hexFromBytes: bytes) }
-    }
     
-    static func encodeRaw(_ value: Data,
-                          forType type: ABIRawType,
-                          padded: Bool = true,
-                          size: Int = 1) throws -> EncodedValue {
-        return try encodeRaw(value.web3.hexString, forType: type, padded: padded, size: size)
-    }
-    
-    static func encodeRaw(_ value: String,
-                          forType type: ABIRawType,
-                          padded: Bool = true,
-                          size: Int = 1) throws -> EncodedValue {
-        let encoded: [UInt8] = try encodeRaw(value, forType: type, padded: padded, size: size)
-        return .value(bytes: encoded,
-                      isDynamic: type.isDynamic,
-                      staticLength: type.isDynamic ? 32 : 32 * size)
-    }
-    
-    private static func encodeRaw(_ value: String,
-                                  forType type: ABIRawType,
-                                  padded: Bool = true,
-                                  size: Int = 1) throws -> [UInt8] {
+    static func encode(_ value: String,
+                       forType type: ABIRawType,
+                       packed: Bool = true,
+                       size: Int = 1) throws -> [UInt8] {
         var encoded: [UInt8] = [UInt8]()
         
         switch type {
-        case .FixedUInt(let typeSize):
-            let bytesSize = typeSize / 8
-            guard let int = value.web3.isNumeric ? BigUInt(value) : BigUInt(hex: value) else {
+        case .FixedUInt(_):
+            guard value.isNumeric, let int = BigInt(value) else {
+                throw ABIError.invalidType
+            }
+            let bytes = int.bytes // should be <= 32 bytes
+            guard bytes.count <= 32 else {
                 throw ABIError.invalidValue
             }
-            let bytes = int.web3.bytes // should be <= 32 bytes
-            guard bytes.count <= 32, bytesSize <= 32 else {
-                throw ABIError.invalidValue
-            }
-            if padded {
+            if packed {
                 encoded = [UInt8](repeating: 0x00, count: 32 - bytes.count) + bytes
             } else {
-                encoded = [UInt8](repeating: 0x00, count: bytesSize - bytes.count) + bytes
+                encoded = bytes
             }
         case .FixedInt(_):
-            guard let int = value.web3.isNumeric ? BigInt(value) : BigInt(hex: value) else {
+            guard Double(value) != nil, let int = BigInt(value) else {
                 throw ABIError.invalidType
             }
             
-            let bytes = int.web3.bytes // should be <= 32 bytes
+            let bytes = int.bytes // should be <= 32 bytes
             guard bytes.count <= 32 else {
                 throw ABIError.invalidValue
             }
@@ -102,31 +47,30 @@ public class ABIEncoder {
                 encoded = [UInt8](repeating: 0, count: 32 - bytes.count) + bytes
             }
             
-            if !padded {
+            if !packed {
                 encoded = bytes
             }
         case .FixedBool:
-            encoded = try encodeRaw(value == "true" ? "1":"0", forType: ABIRawType.FixedUInt(8), padded: padded)
+            encoded = try encode(value == "true" ? "1":"0", forType: ABIRawType.FixedUInt(8))
         case .FixedAddress:
-            guard let bytes = value.web3.bytesFromHex else { throw ABIError.invalidValue } // Must be 20 bytes
-            if padded  {
+            guard let bytes = value.bytesFromHex else { throw ABIError.invalidValue } // Must be 20 bytes
+            if packed  {
                 encoded = [UInt8](repeating: 0x00, count: 32 - bytes.count) + bytes
             } else {
                 encoded = bytes
             }
         case .DynamicString:
-            let bytes = value.web3.bytes
-            let len = try encodeRaw(String(bytes.count), forType: ABIRawType.FixedUInt(256)).bytes
+            let bytes = value.bytes
+            let len = try encode(String(bytes.count), forType: ABIRawType.FixedUInt(256))
             let pack = (bytes.count - (bytes.count % 32)) / 32 + 1
-            if padded {
-                encoded = len + bytes + [UInt8](repeating: 0x00, count: pack * 32 - bytes.count)
-            } else {
-                encoded = bytes
+            encoded = len + bytes
+            if packed {
+                encoded += [UInt8](repeating: 0x00, count: pack * 32 - bytes.count)
             }
         case .DynamicBytes:
             // Bytes are hex encoded
-            guard let bytes = value.web3.bytesFromHex else { throw ABIError.invalidValue }
-            let len = try encodeRaw(String(bytes.count), forType: ABIRawType.FixedUInt(256)).bytes
+            guard let bytes = value.bytesFromHex else { throw ABIError.invalidValue }
+            let len = try encode(String(bytes.count), forType: ABIRawType.FixedUInt(256))
             let pack: Int
             if bytes.count == 0 {
                 pack = 0
@@ -134,34 +78,31 @@ public class ABIEncoder {
                 pack = (bytes.count - (bytes.count % 32)) / 32 + 1
             }
             
-            if padded {
-                encoded = len + bytes + [UInt8](repeating: 0x00, count: pack * 32 - bytes.count)
-            } else {
-                encoded = bytes
+            encoded = len + bytes
+            if packed {
+                encoded += [UInt8](repeating: 0x00, count: pack * 32 - bytes.count)
             }
         case .FixedBytes(_):
             // Bytes are hex encoded
-            guard let bytes = value.web3.bytesFromHex else { throw ABIError.invalidValue }
-            if padded {
-                encoded = bytes + [UInt8](repeating: 0x00, count: 32 - bytes.count)
-            } else {
-                encoded = bytes
+            guard let bytes = value.bytesFromHex else { throw ABIError.invalidValue }
+            encoded = bytes
+            if packed {
+                encoded += [UInt8](repeating: 0x00, count: 32 - bytes.count)
             }
         case .DynamicArray(let type):
             let unitSize = type.size * 2
-            let stringValue = value.web3.noHexPrefix
+            let stringValue = value.noHexPrefix
             let size = stringValue.count / unitSize
-            
-            let padUnits = type.isPaddedInDynamic
+
             var bytes = [UInt8]()
             for i in (0..<size) {
                 let start =  stringValue.index(stringValue.startIndex, offsetBy: i * unitSize)
                 let end = stringValue.index(start, offsetBy: unitSize)
                 let unitValue = String(stringValue[start..<end])
-                let unitBytes = try encodeRaw(unitValue, forType: type, padded: padUnits).bytes
+                let unitBytes = try encode(unitValue, forType: type, packed: false)
                 bytes.append(contentsOf: unitBytes)
             }
-            let len = try encodeRaw(String(size), forType: ABIRawType.FixedUInt(256)).bytes
+            let len = try encode(String(size), forType: ABIRawType.FixedUInt(256))
             
             let pack: Int
             if bytes.count == 0 {
@@ -171,44 +112,19 @@ public class ABIEncoder {
             }
             
             encoded = len + bytes + [UInt8](repeating: 0x00, count: pack * 32 - bytes.count)
-        case .Tuple:
-            throw ABIError.notCurrentlySupported
-        case .FixedArray:
-            throw ABIError.notCurrentlySupported
+        case .FixedArray(_, _):
+            throw ABIError.notCurrentlySupported // TODO
         }
-        
+    
         return encoded
+    }
+    
+    static func signature(name: String, types: [ABIRawType]) throws -> [UInt8] {
+        let typeNames = types.map { $0.rawValue }
+        let signature = name + "(" + typeNames.joined(separator: ",") + ")"
+        guard let data = signature.data(using: .utf8) else { throw ABIError.invalidSignature }
+        return data.keccak256.bytes
     }
 }
 
-extension Array where Element == ABIEncoder.EncodedValue {
-    func encoded(isDynamic: Bool) throws -> [UInt8] {
-        var head = [UInt8]()
-        var tail = [UInt8]()
-        
-        let offset = map { $0.staticLength }.reduce(0, +)
-        
-        let encode: ([UInt8], Bool, Int?) throws -> Void = { bytes, isDynamic, size in
-            if isDynamic {
-                let len: [UInt8] = try size.map { try ABIEncoder.encodeRaw(String($0), forType: ABIRawType.FixedUInt(256)).bytes } ?? []
-                    
-                let position = offset + (tail.count)
-                head += try ABIEncoder.encodeRaw(String(position), forType: ABIRawType.FixedInt(256)).bytes
-                tail += len + bytes
-            } else {
-                head += bytes
-            }
-        }
-        
-        try forEach { element in
-            switch element {
-            case .container(let values, let isDynamic, let size):
-                try encode(try values.encoded(isDynamic: isDynamic), isDynamic, size)
-            case .value(let bytes , let isDynamic, _):
-                try encode(bytes, isDynamic, nil)
-            }
-        }
-        
-        return head + tail
-    }
-}
+
