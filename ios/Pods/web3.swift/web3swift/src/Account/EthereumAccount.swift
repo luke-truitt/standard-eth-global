@@ -9,7 +9,7 @@
 import Foundation
 
 protocol EthereumAccountProtocol {
-    var address: EthereumAddress { get }
+    var address: String { get }
     
     // For Keystore handling
     init?(keyStorage: EthereumKeyStorageProtocol, keystorePassword: String) throws
@@ -37,10 +37,10 @@ public class EthereumAccount: EthereumAccountProtocol {
     private let publicKeyData: Data
     
     public lazy var publicKey: String = {
-        return self.publicKeyData.web3.hexString
+        return self.publicKeyData.hexString
     }()
     
-    public lazy var address: EthereumAddress = {
+    public lazy var address: String = {
         return KeyUtil.generateAddress(from: self.publicKeyData)
     }()
     
@@ -97,7 +97,7 @@ public class EthereumAccount: EthereumAccountProtocol {
     }
     
     public func sign(hash: String) throws -> Data {
-        if let data = hash.web3.hexData {
+        if let data = hash.hexData {
             return try KeyUtil.sign(message: data, with: self.privateKeyData, hashing: false)
         } else {
             throw EthereumAccountError.signError
@@ -114,54 +114,5 @@ public class EthereumAccount: EthereumAccountProtocol {
         } else {
             throw EthereumAccountError.signError
         }
-    }
-    
-    public func signMessage(message: Data) throws -> String {
-        let prefix = "\u{19}Ethereum Signed Message:\n\(String(message.count))"
-        guard var data = prefix.data(using: .ascii) else {
-            throw EthereumAccountError.signError
-        }
-        data.append(message)
-        let hash = data.web3.keccak256
-        
-        guard var signed = try? self.sign(message: hash) else {
-            throw EthereumAccountError.signError
-            
-        }
-        
-        // Check last char (v)
-        guard var last = signed.popLast() else {
-            throw EthereumAccountError.signError
-            
-        }
-        
-        if last < 27 {
-            last += 27
-        }
-        
-        signed.append(last)
-        return signed.web3.hexString
-    }
-    
-    public func signMessage(message: TypedData) throws -> String {
-        let hash = try message.signableHash()
-        
-        guard var signed = try? self.sign(message: hash) else {
-            throw EthereumAccountError.signError
-            
-        }
-        
-        // Check last char (v)
-        guard var last = signed.popLast() else {
-            throw EthereumAccountError.signError
-            
-        }
-        
-        if last < 27 {
-            last += 27
-        }
-        
-        signed.append(last)
-        return signed.web3.hexString
     }
 }

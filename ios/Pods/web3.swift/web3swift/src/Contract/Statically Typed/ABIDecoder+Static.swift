@@ -14,42 +14,31 @@ extension ABIDecoder {
     public typealias ParsedABIEntry = String
     public typealias ABIEntry = [String]
     
-    public struct DecodedValue {
-        let entry: ABIEntry
-        
-        public func decoded<T: ABIType>() throws -> T {
-            let parse = T.parser
-            guard let decoded = try parse(entry) as? T else {
-                throw ABIError.invalidValue
-            }
-            return decoded
+    public static func decodeData(_ data: RawABI, types: [ABIType.Type], asArray: Bool = false) throws -> [ABIType] {
+        let rawTypes = types.compactMap { ABIRawType(type: $0) }
+        guard rawTypes.count == types.count else {
+            throw ABIError.incorrectParameterCount
         }
         
-        public func decodedArray<T: ABIType>() throws -> [T] {
-            let parse = T.parser
-            let parsed = try entry.map { try parse([$0]) }.compactMap { $0 as? T }
-            
-            guard entry.count == parsed.count else {
-                throw ABIError.invalidValue
-            }
-            
-            return parsed
-        }
-    }
-    
-    public static func decodeData(_ data: RawABI, types: [ABIType.Type], asArray: Bool = false) throws -> [DecodedValue] {
-        let rawTypes = types.map { $0.rawType }
-
         let rawDecoded = try ABIDecoder.decodeData(data, types: rawTypes, asArray: asArray)
         guard rawDecoded.count == types.count else {
             throw ABIError.incorrectParameterCount
         }
         
-        return rawDecoded.map(DecodedValue.init)
+        return try zip(rawDecoded, types).map { try ABIDecoder.buildType($0.0, type:$0.1) }
+    }
+    
+    static func buildType(_ data: ABIEntry, type: ABIType.Type) throws -> ABIType {
+        guard let rawType = ABIRawType(type: type) else {
+            throw ABIError.invalidValue
+        }
+        
+        let parser = try rawType.parser(type: type)
+        return try parser(data)
     }
     
     public static func decode(_ data: ParsedABIEntry, to: String.Type) throws -> String {
-        return data.web3.stringValue
+        return data.stringValue
     }
     
     public static func decode(_ data: ParsedABIEntry, to: Bool.Type) throws -> Bool {
@@ -105,6 +94,10 @@ extension ABIDecoder {
         return UInt64(value)
     }
     
+    public static func decode(_ data: [ParsedABIEntry], to: [EthereumAddress].Type) throws -> [EthereumAddress] {
+        return data.map { EthereumAddress($0) }
+    }
+    
     public static func decode(_ data: ParsedABIEntry, to: URL.Type) throws -> URL {
         guard let string = try? ABIDecoder.decode(data, to: String.self) else {
             throw ABIError.invalidValue
@@ -122,4 +115,43 @@ extension ABIDecoder {
         return data
     }
 
+}
+
+extension ABIRawType {
+    func parser(type: ABIType.Type) throws -> ([String]) throws -> ABIType {
+        return { data in
+            let first = data.first ?? ""
+            switch type {
+            case is String.Type:
+                return try ABIDecoder.decode(first, to: String.self)
+            case is Bool.Type:
+                return try ABIDecoder.decode(first, to: Bool.self)
+            case is EthereumAddress.Type:
+                return try ABIDecoder.decode(first, to: EthereumAddress.self)
+            case is BigInt.Type:
+                return try ABIDecoder.decode(first, to: BigInt.self)
+            case is BigUInt.Type:
+                return try ABIDecoder.decode(first, to: BigUInt.self)
+            case is UInt8.Type:
+                return try ABIDecoder.decode(first, to: UInt16.self)
+            case is UInt16.Type:
+                return try ABIDecoder.decode(first, to: UInt16.self)
+            case is UInt32.Type:
+                return try ABIDecoder.decode(first, to: UInt32.self)
+            case is UInt64.Type:
+                return try ABIDecoder.decode(first, to: UInt64.self)
+            case is URL.Type:
+                return try ABIDecoder.decode(first, to: URL.self)
+            case is ABIFixedSizeDataType.Type:
+                return try ABIDecoder.decode(first, to: Data.self)
+            case is Data.Type:
+                return try ABIDecoder.decode(first, to: Data.self)
+            case is Array<EthereumAddress>.Type:
+                return try ABIDecoder.decode(data, to: [EthereumAddress].self)
+            default:
+                throw ABIError.invalidValue
+            }
+        }
+        
+    }
 }

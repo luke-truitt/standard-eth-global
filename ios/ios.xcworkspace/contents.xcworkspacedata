@@ -48,6 +48,9 @@
       <FileRef
          location = "group:Info.plist">
       </FileRef>
+      <FileRef
+         location = "group:/Users/truitt/Desktop/Dev/standard/standard-eth-global/ios/ios/LendingPoolABI.json">
+      </FileRef>
    </Group>
    <Group
       location = "group:iosTests"

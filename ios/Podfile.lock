@@ -1,11 +1,9 @@
 PODS:
-  - BigInt (5.0.0)
-  - GenericJSON (2.0.1)
-  - secp256k1.swift (0.1.4)
-  - web3.swift (0.7.2):
-    - BigInt (~> 5.0.0)
-    - GenericJSON (~> 2.0)
-    - secp256k1.swift (~> 0.1)
+  - BigInt (3.1.0):
+    - SipHash (~> 1.2)
+  - SipHash (1.2.2)
+  - web3.swift (0.2.0):
+    - BigInt (~> 3.1.0)
 
 DEPENDENCIES:
   - web3.swift
@@ -13,15 +11,13 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - BigInt
-    - GenericJSON
-    - secp256k1.swift
+    - SipHash
     - web3.swift
 
 SPEC CHECKSUMS:
-  BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
-  GenericJSON: a6e74e2c457f8693caab08e0eafde7d97e6666de
-  secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
-  web3.swift: 480dd988a93763213b4446da11cd73c39081505b
+  BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
+  SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
+  web3.swift: c6a26db79f6d9f1040c198bddc6488ee1a027f80
 
 PODFILE CHECKSUM: 022f62592f087bf0311ec966e11e8cdcdc422438
 

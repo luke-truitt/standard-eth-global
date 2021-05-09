@@ -10,7 +10,7 @@ import Foundation
 import BigInt
 
 public class ERC165 {
-    public let client: EthereumClient
+    let client: EthereumClient
     public init(client: EthereumClient) {
         self.client = client
     }
@@ -29,43 +29,31 @@ public class ERC165 {
 
 public enum ERC165Functions {
     public static var interfaceId: Data {
-        return "supportsInterface(bytes4)".web3.keccak256.web3.bytes4
+        return "supportsInterface(bytes4)".keccak256.bytes4
     }
     
     struct supportsInterface: ABIFunction {
-        public static let name = "supportsInterface"
-        public let gasPrice: BigUInt?
-        public let gasLimit: BigUInt?
-        public var contract: EthereumAddress
-        public let from: EthereumAddress?
+        static let name = "supportsInterface"
+        let gasPrice: BigUInt? = nil
+        let gasLimit: BigUInt? = nil
+        var contract: EthereumAddress
+        let from: EthereumAddress? = nil
         
         let interfaceId: Data
         
-        public init(contract: EthereumAddress,
-                    from: EthereumAddress? = nil,
-                    interfaceId: Data,
-                    gasPrice: BigUInt? = nil,
-                    gasLimit: BigUInt? = nil) {
-            self.contract = contract
-            self.from = from
-            self.interfaceId = interfaceId
-            self.gasPrice = gasPrice
-            self.gasLimit = gasLimit
-        }
-        
-        public func encode(to encoder: ABIFunctionEncoder) throws {
+        func encode(to encoder: ABIFunctionEncoder) throws {
             assert(interfaceId.count == 4, "Interface data should contain exactly 4 bytes")
-            try encoder.encode(interfaceId, staticSize: 4)
+            try encoder.encode(interfaceId, size: Data4.self)
         }
     }
 }
 
 public enum ERC165Responses {
-    public struct supportsInterfaceResponse: ABIResponse {
-        public static var types: [ABIType.Type] = [ Bool.self ]
-        public let supported: Bool
+    struct supportsInterfaceResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ Bool.self ]
+        let supported: Bool
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.supported = try values[0].decoded()
         }
     }

@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "@aave/protocol-js": "^2.7.2"
+    "@aave/protocol-js": "^2.7.2",
+    "@aave/protocol-v2": "^1.0.1",
+    "ethereumjs-tx": "^2.1.2",
+    "ethers": "^5.1.4",
+    "tslib": "^2.2.0"
   }
 }

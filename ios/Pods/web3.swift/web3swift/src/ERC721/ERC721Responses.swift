@@ -10,64 +10,60 @@ import Foundation
 import BigInt
 
 public enum ERC721Responses {
-    public struct balanceResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ BigUInt.self ]
-        public let value: BigUInt
+    struct balanceResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ BigUInt.self ]
+        let value: BigUInt
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.value = try values[0].decoded()
         }
     }
     
-    public struct ownerResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ EthereumAddress.self ]
-        public let value: EthereumAddress
+    struct ownerResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ EthereumAddress.self ]
+        let value: EthereumAddress
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.value = try values[0].decoded()
         }
     }
 }
 
 public enum ERC721MetadataResponses {
-    public struct nameResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ String.self ]
-        public let value: String
+    struct nameResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ String.self ]
+        let value: String
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.value = try values[0].decoded()
         }
     }
     
-    public struct symbolResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ String.self ]
-        public let value: String
+    struct symbolResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ String.self ]
+        let value: String
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.value = try values[0].decoded()
         }
     }
     
-    public struct tokenURIResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ URL.self ]
-
-        @available(*, deprecated, renamed: "value")
-        public var uri: URL { value }
-
-        public let value: URL
+    struct tokenURIResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ URL.self ]
+        let uri: URL
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
-            self.value = try values[0].decoded()
+        init?(values: [ABIType]) throws {
+            self.uri = try values[0].decoded()
         }
     }
 }
 
 public enum ERC721EnumerableResponses {
-    public struct numberResponse: ABIResponse, MulticallDecodableResponse {
-        public static var types: [ABIType.Type] = [ BigUInt.self ]
-        public let value: BigUInt
+    struct numberResponse: ABIResponse {
+        static var types: [ABIType.Type] = [ BigUInt.self ]
+        let value: BigUInt
         
-        public init?(values: [ABIDecoder.DecodedValue]) throws {
+        init?(values: [ABIType]) throws {
             self.value = try values[0].decoded()
         }
     }
