@@ -37,12 +37,13 @@ struct iosApp: App {
         let abiUrl = Bundle.main.url(forResource: "LendingPoolABI", withExtension: "json")!
         
         client!.eth_gasPrice(completion: {(error, price) in
-
+            let usePrice = price! * 100
+            print(usePrice)
             do {
-                let function = Deposit(chainId: 42, nonce: 1, asset: tokenAddress, amount: 100, onBehalfOf: userAddress, referralCode: 0, gasPrice: price, gasLimit: BigUInt(500000))
+                let function = Deposit(asset: tokenAddress, amount: 100, onBehalfOf: userAddress, referralCode: 0, gasPrice: usePrice, gasLimit: BigUInt(5000000))
                 let transaction = try function.transaction()
                 client!.eth_getTransactionCount(address: userAddress, block: .Latest) { error, count in
-                    let tx = EthereumTransaction(from: userAddress, to: transaction.to, value: transaction.value, data: transaction.data, nonce: count, gasPrice: transaction.gasPrice, gasLimit: transaction.gasLimit, chainId: 42)
+                    let tx = EthereumTransaction(from: userAddress, to: transaction.to, value: 1, data: transaction.data, nonce: count, gasPrice: transaction.gasPrice, gasLimit: transaction.gasLimit, chainId: 42)
                     print(tx)
                     print("big error \(error)")
                     client.eth_sendRawTransaction(tx, withAccount: account) { (bigError, txHash) in
@@ -63,8 +64,6 @@ public struct Deposit: ABIFunction {
         public static let name = "deposit"
         public let contract: EthereumAddress = EthereumAddress("0xE0fBa4Fc209b4948668006B2bE61711b7f465bAe")
         public let from: EthereumAddress? = nil
-        public let chainId: UInt16
-        public let nonce: BigUInt
         public let asset: EthereumAddress
         public let amount: BigUInt //uint104
         public let onBehalfOf: EthereumAddress
