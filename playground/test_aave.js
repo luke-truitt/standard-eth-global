@@ -90,6 +90,7 @@ async function depositToken(
   const estimatedGas = await contractCall.estimateGas({
     from: account.address,
   });
+  console.log(estimatedGas)
   const tx = await buildTransaction({
     web3,
     from: account.address,
@@ -98,7 +99,9 @@ async function depositToken(
     data: contractCall.encodeABI(),
     estimatedGas,
   });
+  console.log(tx)
   const signedTx = await signTransaction(tx, account.privateKey, chain);
+
   const res = await web3.eth.sendSignedTransaction(signedTx);
 
   return res;

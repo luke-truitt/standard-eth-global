@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		517C7AC1B6BD3898A32E0E77 /* Pods_standard_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664EB1AA16C51A49C919F891 /* Pods_standard_ios.framework */; };
 		6C6D0D321718F3E24FDE6DA8 /* Pods_standard_ios_standard_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A971F402132CA7C4423E8A11 /* Pods_standard_ios_standard_iosUITests.framework */; };
+		72CCE81426486221000161E0 /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = 72CCE81326486221000161E0 /* web3.swift */; };
 		7932FB022646CFE5009D14DE /* standard_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932FB012646CFE5009D14DE /* standard_iosApp.swift */; };
 		7932FB062646CFE9009D14DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7932FB052646CFE9009D14DE /* Assets.xcassets */; };
 		7932FB092646CFE9009D14DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7932FB082646CFE9009D14DE /* Preview Assets.xcassets */; };
@@ -81,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CCE81426486221000161E0 /* web3.swift in Frameworks */,
 				517C7AC1B6BD3898A32E0E77 /* Pods_standard_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +232,9 @@
 			dependencies = (
 			);
 			name = "standard-ios";
+			packageProductDependencies = (
+				72CCE81326486221000161E0 /* web3.swift */,
+			);
 			productName = "standard-ios";
 			productReference = 7932FAFE2646CFE5009D14DE /* standard-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -304,6 +309,9 @@
 				Base,
 			);
 			mainGroup = 7932FAF52646CFE5009D14DE;
+			packageReferences = (
+				72CCE81226486221000161E0 /* XCRemoteSwiftPackageReference "web3" */,
+			);
 			productRefGroup = 7932FAFF2646CFE5009D14DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -778,6 +786,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72CCE81226486221000161E0 /* XCRemoteSwiftPackageReference "web3" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argentlabs/web3.swift";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72CCE81326486221000161E0 /* web3.swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72CCE81226486221000161E0 /* XCRemoteSwiftPackageReference "web3" */;
+			productName = web3.swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7932FAF62646CFE5009D14DE /* Project object */;
 }

@@ -7,6 +7,7 @@ target 'standard-ios' do
 
   # Pods for standard-ios
   pod 'Stripe'
+  pod 'web3.swift'
 
   target 'standard-iosTests' do
     inherit! :search_paths
