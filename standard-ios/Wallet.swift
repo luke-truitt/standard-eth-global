@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import web3
 
 struct Wallet {
     var userId : UUID
