@@ -17,8 +17,9 @@ struct StandardApp: App {
 //    @LazyInjected var authenticationService: AuthenticationService
      
      init() {
-       FirebaseApp.configure()
+//       FirebaseApp.configure()
 //       authenticationService.signIn()
+        
      }
 
     var body: some Scene {

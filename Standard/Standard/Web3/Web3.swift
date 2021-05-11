@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import web3
 public class Web3 {
     var client:Ethereum
     
@@ -15,12 +15,25 @@ public class Web3 {
     }
     
     public func createAccount(completion: @escaping(EthereumAccount, Error)->Void) {
-        
+        do {
+            var keyStorage = EthereumKeyLocalStorage()
+            var account = try! EthereumAccount.create(keyStorage: keyStorage, keystorePassword: "hello")
+            completion(.success(account))
+        }
+        catch let err {
+            completion(.failure(err))
+        }
     }
     
     public func loadAccount(address:String, privateKey:String, completion: @escaping(EthereumAccount, Error)->Void) {
-        var keyStorage = TestEthereumKeyStorage(privateKey: userKey)
-        var account = try! EthereumAccount(keyStorage: keyStorage)
+        do {
+            var keyStorage = TestEthereumKeyStorage(privateKey: userKey)
+            var account = try! EthereumAccount(keyStorage: keyStorage)
+            completion(.success(account))
+        } catch let err {
+            completion(.failure(err))
+        }
+        
     }
     
     public func transfer(token: String, fromAddress: String, fromKey: String, to: String, amount: String, completion: @escaping(String, Error)->Void) {
