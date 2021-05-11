@@ -9,6 +9,7 @@ target 'standard-ios' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'web3.swift'
 
   target 'standard-iosTests' do
     inherit! :search_paths

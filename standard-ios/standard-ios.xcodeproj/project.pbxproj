@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		517C7AC1B6BD3898A32E0E77 /* Pods_standard_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664EB1AA16C51A49C919F891 /* Pods_standard_ios.framework */; };
 		6C6D0D321718F3E24FDE6DA8 /* Pods_standard_ios_standard_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A971F402132CA7C4423E8A11 /* Pods_standard_ios_standard_iosUITests.framework */; };
+		72CCE81426486221000161E0 /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = 72CCE81326486221000161E0 /* web3.swift */; };
 		7932FB022646CFE5009D14DE /* standard_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932FB012646CFE5009D14DE /* standard_iosApp.swift */; };
 		7932FB062646CFE9009D14DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7932FB052646CFE9009D14DE /* Assets.xcassets */; };
 		7932FB092646CFE9009D14DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7932FB082646CFE9009D14DE /* Preview Assets.xcassets */; };
@@ -28,6 +29,8 @@
 		798485E226499C6000FEE916 /* SellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798485E126499C6000FEE916 /* SellView.swift */; };
 		79951810264732D900488031 /* BankAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995180F264732D900488031 /* BankAccountsView.swift */; };
 		7995181226482C3400488031 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7995181126482C3400488031 /* Podfile */; };
+		79EAD6E3264A57060006E561 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 79EAD6E1264A57050006E561 /* Podfile.lock */; };
+		79EAD6E4264A57060006E561 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAD6E2264A57060006E561 /* Wallet.swift */; };
 		A2858A12AADC2E7B67148DB3 /* Pods_standard_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9641051F6453795A53C9682D /* Pods_standard_iosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,8 @@
 		798485E126499C6000FEE916 /* SellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellView.swift; sourceTree = "<group>"; };
 		7995180F264732D900488031 /* BankAccountsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountsView.swift; sourceTree = "<group>"; };
 		7995181126482C3400488031 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		79EAD6E1264A57050006E561 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		79EAD6E2264A57060006E561 /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		9641051F6453795A53C9682D /* Pods_standard_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_standard_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25E2CD765073E1D8EA5918E /* Pods-standard-ios-standard-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-standard-ios-standard-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-standard-ios-standard-iosUITests/Pods-standard-ios-standard-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A971F402132CA7C4423E8A11 /* Pods_standard_ios_standard_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_standard_ios_standard_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CCE81426486221000161E0 /* web3.swift in Frameworks */,
 				517C7AC1B6BD3898A32E0E77 /* Pods_standard_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				7995181126482C3400488031 /* Podfile */,
+				79EAD6E1264A57050006E561 /* Podfile.lock */,
+				79EAD6E2264A57060006E561 /* Wallet.swift */,
 				7932FB002646CFE5009D14DE /* standard-ios */,
 				7932FB122646CFEA009D14DE /* standard-iosTests */,
 				7932FB1D2646CFEA009D14DE /* standard-iosUITests */,
@@ -259,6 +267,9 @@
 			dependencies = (
 			);
 			name = "standard-ios";
+			packageProductDependencies = (
+				72CCE81326486221000161E0 /* web3.swift */,
+			);
 			productName = "standard-ios";
 			productReference = 7932FAFE2646CFE5009D14DE /* standard-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -333,6 +344,9 @@
 				Base,
 			);
 			mainGroup = 7932FAF52646CFE5009D14DE;
+			packageReferences = (
+				72CCE81226486221000161E0 /* XCRemoteSwiftPackageReference "web3" */,
+			);
 			productRefGroup = 7932FAFF2646CFE5009D14DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,6 +365,7 @@
 			files = (
 				7995181226482C3400488031 /* Podfile in Resources */,
 				7932FB092646CFE9009D14DE /* Preview Assets.xcassets in Resources */,
+				79EAD6E3264A57060006E561 /* Podfile.lock in Resources */,
 				7932FB062646CFE9009D14DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79EAD6E4264A57060006E561 /* Wallet.swift in Sources */,
 				793D00E1264840BA0052BBE0 /* OnboardingView.swift in Sources */,
 				793D00E2264840BA0052BBE0 /* User.swift in Sources */,
 				793D00E3264840BA0052BBE0 /* Wallet.swift in Sources */,
@@ -818,6 +834,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72CCE81226486221000161E0 /* XCRemoteSwiftPackageReference "web3" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argentlabs/web3.swift";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72CCE81326486221000161E0 /* web3.swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72CCE81226486221000161E0 /* XCRemoteSwiftPackageReference "web3" */;
+			productName = web3.swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7932FAF62646CFE5009D14DE /* Project object */;
 }
