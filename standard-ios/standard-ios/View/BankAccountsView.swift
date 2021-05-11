@@ -10,6 +10,7 @@ import SwiftUI
 struct BankAccountView: View {
     @State var isChecked:Bool = true
     var accounts : [[String:String]] = [["nickname": "Capital One", "type":"Checking", "digits": "2320"], ["nickname": "CHECKING", "type":"Checking", "digits": "8155"]]
+    
     var body: some View {
         HStack{
             VStack{

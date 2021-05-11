@@ -15,8 +15,11 @@ private var currencyFormatter: NumberFormatter = {
     return f
 }()
 
+
 struct EnterAmountView: View {
-    @State var amount: Double = 0.00
+    @Binding var amount : Double
+    @Binding var showSheetView : Bool
+
     var body: some View {
         VStack{
             Spacer()
@@ -25,20 +28,17 @@ struct EnterAmountView: View {
             Spacer()
             if(amount == 0.00){
             HStack{
-                Button("$1"){}.buttonStyle(RoundedOutlinedButtonStyle())
-                Button("$10"){}.buttonStyle(RoundedOutlinedButtonStyle())
-                Button("$100"){}.buttonStyle(RoundedOutlinedButtonStyle())
+                Button("$1"){amount=1.00}.buttonStyle(RoundedOutlinedButtonStyle())
+                Button("$10"){amount=10.00}.buttonStyle(RoundedOutlinedButtonStyle())
+                Button("$100"){amount=100.00}.buttonStyle(RoundedOutlinedButtonStyle())
             }}
             else{
-                Button("Review"){}.buttonStyle(RoundedFilledButtonStyle())
+                Button("Review"){
+                    self.showSheetView.toggle()
+                }.buttonStyle(RoundedFilledButtonStyle())
             }
         }
         .padding(20)
     }
-}
-
-struct EnterAmountView_Previews: PreviewProvider {
-    static var previews: some View {
-        EnterAmountView()
-    }
+    
 }

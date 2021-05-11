@@ -11,5 +11,5 @@ import Foundation
 struct WalletEvent {
     let to : String
     let from : String
-    let amount : String
+    let amount : Float
 }

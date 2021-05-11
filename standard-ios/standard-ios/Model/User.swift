@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User {
+class User {
     let id = UUID()
     var accounts : [[String:String]]
     var name : String
