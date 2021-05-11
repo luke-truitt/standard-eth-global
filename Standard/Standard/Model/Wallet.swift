@@ -47,9 +47,13 @@ class Wallet : Codable, Identifiable {
         history.append(event)
     }
     
-    func getInterestEarned() -> Float{
+    func getInterestRate() -> Float{
         //TODO - Calculate interest earned based on wallet events or public chain data
-        return 0.00
+        return 0.04
         
+    }
+    
+    func getInterestRatePerDay() -> Float {
+        return getInterestRate()/(365*24*60*60*2)
     }
 }
