@@ -8,6 +8,42 @@
       location = "group:ios"
       name = "ios">
       <Group
+         location = "container:"
+         name = "Wallet">
+         <FileRef
+            location = "group:Account.swift">
+         </FileRef>
+         <FileRef
+            location = "group:KeyStore.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Subgraph">
+         <FileRef
+            location = "group:InterestRate.swift">
+         </FileRef>
+         <FileRef
+            location = "group:InterestSubGraph.swift">
+         </FileRef>
+         <FileRef
+            location = "group:InterestRateRequest.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Contracts">
+         <FileRef
+            location = "group:Deposit.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Withdraw.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Transfer.swift">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:Assets.xcassets"
          name = "Assets.xcassets">
          <Group
@@ -49,9 +85,6 @@
          location = "group:Info.plist">
       </FileRef>
       <FileRef
-         location = "group:/Users/truitt/Desktop/Dev/standard/standard-eth-global/ios/ios/LendingPoolABI.json">
-      </FileRef>
-      <FileRef
          location = "group:InterestRate.swift">
       </FileRef>
       <FileRef
@@ -59,6 +92,12 @@
       </FileRef>
       <FileRef
          location = "group:InterestRateBody.swift">
+      </FileRef>
+      <FileRef
+         location = "group:web3.swift">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/truitt/Desktop/Dev/standard/standard-eth-global/ios/ios/LendingPoolABI.json">
       </FileRef>
    </Group>
    <Group
