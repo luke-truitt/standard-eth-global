@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72CCE816264ADB08000161E0 /* Web3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCE815264ADB08000161E0 /* Web3.swift */; };
+		72CCE81C264ADB63000161E0 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCE81B264ADB63000161E0 /* Deposit.swift */; };
+		72CCE81E264ADB6D000161E0 /* Withdraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCE81D264ADB6D000161E0 /* Withdraw.swift */; };
+		72CCE820264ADB74000161E0 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCE81F264ADB74000161E0 /* Transfer.swift */; };
+		72CCE822264ADB84000161E0 /* Keystore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCE821264ADB84000161E0 /* Keystore.swift */; };
+		72CCE824264ADB8C000161E0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCE823264ADB8C000161E0 /* Account.swift */; };
+		72CCE826264ADB95000161E0 /* InterestRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCE825264ADB95000161E0 /* InterestRate.swift */; };
+		72CCE828264ADBA1000161E0 /* InterestRateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCE827264ADBA1000161E0 /* InterestRateRequest.swift */; };
+		72CCE82A264ADBB1000161E0 /* InterestRateSubgraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCE829264ADBB1000161E0 /* InterestRateSubgraph.swift */; };
 		798485F02649A76200FEE916 /* StandardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798485EF2649A76200FEE916 /* StandardApp.swift */; };
 		798485F72649A76400FEE916 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798485F62649A76400FEE916 /* Preview Assets.xcassets */; };
 		798486022649A76400FEE916 /* StandardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798486012649A76400FEE916 /* StandardTests.swift */; };
@@ -56,6 +65,15 @@
 /* Begin PBXFileReference section */
 		0BDC5354751C7A07D1C9DFE9 /* Pods-Standard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Standard.release.xcconfig"; path = "Target Support Files/Pods-Standard/Pods-Standard.release.xcconfig"; sourceTree = "<group>"; };
 		6B97A748FBA39892FDD8AD0A /* Pods-Standard-StandardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Standard-StandardUITests.debug.xcconfig"; path = "Target Support Files/Pods-Standard-StandardUITests/Pods-Standard-StandardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		72CCE815264ADB08000161E0 /* Web3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3.swift; sourceTree = "<group>"; };
+		72CCE81B264ADB63000161E0 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
+		72CCE81D264ADB6D000161E0 /* Withdraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Withdraw.swift; sourceTree = "<group>"; };
+		72CCE81F264ADB74000161E0 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		72CCE821264ADB84000161E0 /* Keystore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keystore.swift; sourceTree = "<group>"; };
+		72CCE823264ADB8C000161E0 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		72CCE825264ADB95000161E0 /* InterestRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestRate.swift; sourceTree = "<group>"; };
+		72CCE827264ADBA1000161E0 /* InterestRateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestRateRequest.swift; sourceTree = "<group>"; };
+		72CCE829264ADBB1000161E0 /* InterestRateSubgraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestRateSubgraph.swift; sourceTree = "<group>"; };
 		798485EC2649A76200FEE916 /* Standard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Standard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		798485EF2649A76200FEE916 /* StandardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardApp.swift; sourceTree = "<group>"; };
 		798485F62649A76400FEE916 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -136,6 +154,46 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		72CCE817264ADB1B000161E0 /* Web3 */ = {
+			isa = PBXGroup;
+			children = (
+				72CCE81A264ADB57000161E0 /* Contracts */,
+				72CCE819264ADB4E000161E0 /* Wallet */,
+				72CCE818264ADB3C000161E0 /* Subgraph */,
+				72CCE815264ADB08000161E0 /* Web3.swift */,
+			);
+			path = Web3;
+			sourceTree = "<group>";
+		};
+		72CCE818264ADB3C000161E0 /* Subgraph */ = {
+			isa = PBXGroup;
+			children = (
+				72CCE825264ADB95000161E0 /* InterestRate.swift */,
+				72CCE827264ADBA1000161E0 /* InterestRateRequest.swift */,
+				72CCE829264ADBB1000161E0 /* InterestRateSubgraph.swift */,
+			);
+			path = Subgraph;
+			sourceTree = "<group>";
+		};
+		72CCE819264ADB4E000161E0 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				72CCE821264ADB84000161E0 /* Keystore.swift */,
+				72CCE823264ADB8C000161E0 /* Account.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		72CCE81A264ADB57000161E0 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				72CCE81B264ADB63000161E0 /* Deposit.swift */,
+				72CCE81D264ADB6D000161E0 /* Withdraw.swift */,
+				72CCE81F264ADB74000161E0 /* Transfer.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
 		798485E32649A76100FEE916 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +220,7 @@
 		798485EE2649A76200FEE916 /* Standard */ = {
 			isa = PBXGroup;
 			children = (
+				72CCE817264ADB1B000161E0 /* Web3 */,
 				79CAD52A264A4B230016A2DC /* Repositories */,
 				79CAD529264A4B110016A2DC /* Services */,
 				79CAD525264A4B0D0016A2DC /* Podfile.lock */,
@@ -536,23 +595,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CCE81C264ADB63000161E0 /* Deposit.swift in Sources */,
+				72CCE820264ADB74000161E0 /* Transfer.swift in Sources */,
 				79CAD52C264A4B500016A2DC /* StandardApp+Injection.swift in Sources */,
 				798486362649A7B700FEE916 /* SellView.swift in Sources */,
 				798486382649A7B700FEE916 /* BuyView.swift in Sources */,
 				798486372649A7B700FEE916 /* WalletView.swift in Sources */,
 				798486392649A7B700FEE916 /* OnboardingView.swift in Sources */,
 				798486322649A7B700FEE916 /* Wallet.swift in Sources */,
+				72CCE824264ADB8C000161E0 /* Account.swift in Sources */,
 				798486302649A7B700FEE916 /* WalletEvent.swift in Sources */,
 				7984862F2649A7B700FEE916 /* Styles.swift in Sources */,
 				7984862E2649A7B700FEE916 /* PaymentContextDelegate.swift in Sources */,
 				79EAD6E0264A53490006E561 /* WalletsViewModel.swift in Sources */,
+				72CCE81E264ADB6D000161E0 /* Withdraw.swift in Sources */,
 				798486342649A7B700FEE916 /* EnterAmountView.swift in Sources */,
+				72CCE826264ADB95000161E0 /* InterestRate.swift in Sources */,
 				7984862D2649A7B700FEE916 /* StripeClient.swift in Sources */,
+				72CCE822264ADB84000161E0 /* Keystore.swift in Sources */,
 				798486352649A7B700FEE916 /* ConfirmAmountView.swift in Sources */,
 				798486332649A7B700FEE916 /* BankAccountsView.swift in Sources */,
+				72CCE828264ADBA1000161E0 /* InterestRateRequest.swift in Sources */,
+				72CCE816264ADB08000161E0 /* Web3.swift in Sources */,
 				798485F02649A76200FEE916 /* StandardApp.swift in Sources */,
 				798486312649A7B700FEE916 /* User.swift in Sources */,
 				79CAD526264A4B0D0016A2DC /* WalletRepository.swift in Sources */,
+				72CCE82A264ADBB1000161E0 /* InterestRateSubgraph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
