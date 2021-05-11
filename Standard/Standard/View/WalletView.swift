@@ -11,17 +11,26 @@ import SwiftUI
 struct WalletView: View {
     var wallet : Wallet
     var switchView : (String) -> ()
-
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    @State var interest : Float = 0
+    let interestRate : Float
+    
     var body: some View {
         let coins = wallet.balances_matic.map{$0.key}
         let balances = wallet.balances_matic.map {$0.value}
-        let interest = wallet.getInterestEarned()
+//        let interest = wallet.getInterestEarned()
         let totalBalance = wallet.getTotalBalance()
+        let interestRate = wallet.getInterestRatePerDay()
+        let interestFormatted = String(format: "$%.10f", interest)
         
         VStack{
             VStack {
                 Text("Earnings").font(.title).frame(maxWidth: .infinity, alignment: .leading).padding(.bottom, 5)
-                Text("$\(interest)").frame(maxWidth: .infinity, alignment: .leading)
+                Text("\(interestFormatted)").frame(maxWidth: .infinity, alignment: .leading).font(.title3)
+                    .onReceive(timer) {_ in
+                    interest = interest + (interestRate*totalBalance)
+                        print("interest updated \(interest)")
+                }
                 Text("Balance: $\(totalBalance)").frame(maxWidth: .infinity, alignment: .leading)
             }.padding(.bottom, 50)
             VStack {
