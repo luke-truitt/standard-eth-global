@@ -17,8 +17,8 @@ import BigInt
 
 @main
 struct iosApp: App {
-//    let client : EthereumClient! = EthereumClient(url: URL(string: "https://rpc-mumbai.maticvigil.com/v1/bdf5efccf9de08ad6529de85ac5683ce47f0ffe5")!, sessionConfig: URLSessionConfiguration.default )
-    let client : EthereumClient! = EthereumClient(url: URL(string: "https://kovan.infura.io/v3/700be78778b349229366a4a40b1d5df2")!, sessionConfig: URLSessionConfiguration.default )
+    let client : EthereumClient! = EthereumClient(url: URL(string: "https://rpc-mumbai.maticvigil.com/v1/bdf5efccf9de08ad6529de85ac5683ce47f0ffe5")!, sessionConfig: URLSessionConfiguration.default )
+//    let client : EthereumClient! = EthereumClient(url: URL(string: "https://kovan.infura.io/v3/700be78778b349229366a4a40b1d5df2")!, sessionConfig: URLSessionConfiguration.default )
     var body: some Scene {
         WindowGroup {
             ContentView().onAppear(perform: initialize)
@@ -38,15 +38,14 @@ struct iosApp: App {
 //        let user2Address = EthereumAddress("0xCe697A0aF5dA8faB0C13Ba9640488fC8975a3f9B")
 //        let userKey = "36cf2b7d4955842eee79b8c2692dc52c086c2d272c533f80973938c9df491b9f"
 //        let contractAddress = EthereumAddress("0xE0fBa4Fc209b4948668006B2bE61711b7f465bAe")
-//        let tokenAddress = EthereumAddress("0xff795577d9ac8bd7d90ee22b6c1703490b6512fd")
+////        let tokenAddress = EthereumAddress("0xff795577d9ac8bd7d90ee22b6c1703490b6512fd")
+//        let tokenAddress = EthereumAddress("0x001B3B4d0F3714Ca98ba10F6042DaEbF0B1B7b6F")
 //        var keyStorage = TestEthereumKeyStorage(privateKey: userKey)
 //        var account = try! EthereumAccount(keyStorage: keyStorage)
 //        account.address = userAddress
 //        var keyStorage2 = EthereumKeyLocalStorage()
 //        var account2 = try! EthereumAccount.create(keyStorage: keyStorage2, keystorePassword: "hello")
 //        print(account2.address)
-        
-        
 //    }
 //}
 //        client!.eth_gasPrice(completion: {(error, price) in
@@ -60,7 +59,6 @@ struct iosApp: App {
 //                client.eth_sendRawTransaction(tx, withAccount: account) { (bigError, txHash) in
 //                    print("error is \(bigError)")
 //                    print("TX Hash: \(txHash)")
-//
 //            }
 //        }
 //            } catch let transactionError {
@@ -101,10 +99,10 @@ struct iosApp: App {
 //            }
             
 //            do {
-//                let function = Deposit(asset: tokenAddress, amount: BigUInt("295147905179352825856"), onBehalfOf: userAddress, referralCode: UInt16(0), gasPrice: price!, gasLimit: BigUInt(600000))
+//                let function = Deposit(asset: tokenAddress, amount: BigUInt("1000000000"), onBehalfOf: userAddress, referralCode: UInt16(0), gasPrice: price!, gasLimit: BigUInt(600000))
 //                let transaction = try function.transaction()
 //                client!.eth_getTransactionCount(address: userAddress, block: .Latest) { error, count in
-//                    let tx = EthereumTransaction(from: userAddress, to: transaction.to, value: 0, data: transaction.data, nonce: count, gasPrice: transaction.gasPrice, gasLimit: transaction.gasLimit, chainId: 42)
+//                    let tx = EthereumTransaction(from: userAddress, to: transaction.to, value: 0, data: transaction.data, nonce: count, gasPrice: transaction.gasPrice, gasLimit: transaction.gasLimit, chainId: 80001)
 //                    print(tx)
 //                    print("big error \(error)")
 //                    client.eth_sendRawTransaction(tx, withAccount: account) { (bigError, txHash) in
@@ -120,48 +118,76 @@ struct iosApp: App {
 //        })
     }
 }
-func calcAvgRate(completion: @escaping(Result<[InterestRate], Error>)->Void) {
-    let num_blocks = 1800
+
+func calcAvgRate(completion: @escaping(Result<Double, Error>)->Void) {
+    getHistory { result in
+            switch result {
+            case .success(let history):
+                let blocks = getDayBlocks(history: history)
+                let rate = calculateRate(block1: blocks[0], block2: blocks[1])
+                completion(.success(rate))
+            case .failure(let err):
+                print(err)
+                completion(.failure(err))
+            }
+        }
+}
+func getDayBlocks(history: [InterestRate])->[InterestRate] {
+    let mostRecentBlock = history[0];
+    let mostRecentTime = mostRecentBlock.timestamp;
+    let oneDayAgo = mostRecentTime - 24*60*60;
+    var j = history.count - 1;
+    while(oneDayAgo > history[j].timestamp) {
+        j = j - 1
+    }
+    let relevantTimes = [history[0], history[j]]
+    return relevantTimes
+}
+func getHistory(completion: @escaping(Result<[InterestRate], Error>)->Void) {
+    let num_blocks = 200
     let request = InterestRateRequest()
     var i = 0
-    let myGroup = DispatchGroup()
     var rates = [InterestRate]()
     while(i < num_blocks) {
-        myGroup.enter()
+        
         request.getRates(skip_size: i) { result in
             switch result {
                 case .success(let arr):
                     for item in arr {
                         let ii = item as! [String:Any]
-                        let rate = InterestRate(liquidityIndex: ii["liquidityIndex"] as! BigUInt, timestamp: ii["timestamp"] as! BigUInt)
+                        let index = ii["liquidityIndex"] as! String
+                        let time = (ii["timestamp"] as! NSNumber).stringValue
+                        let rate = InterestRate(liquidityIndex: BigUInt(index) ?? 0, timestamp: BigUInt(time) ?? 0)
                         rates.append(rate)
                     }
                     i = i + 100
-                    myGroup.leave()
                 case .failure(let err):
                     print(err)
                     completion(.failure(err))
                 }
             }
+            sleep(1)
         }
     completion(.success(rates))
     }
     
-func calculateRate(block1: [String:Any], block2: [String:Any])->Double {
+func calculateRate(block1: InterestRate, block2: InterestRate)->Double {
     let SECONDS_PER_YEAR = 60*60*24*365.25
-    let index_2 = block2["liquidityIndex"] as! Double;
-    let index_1 = block1["liquidityIndex"] as! Double;
-    let time_2 = block2["timestamp"] as! Double;
-    let time_1 = block1["timestamp"] as! Double;
-    let time_diff = (time_2 - time_1);
-    let rate_ratio = (index_2/index_1);
+    let index_2 = Double(block2.liquidityIndex)
+    let index_1 = Double(block1.liquidityIndex)
+    let time_2 = Double(block2.timestamp)
+    let time_1 = Double(block1.timestamp)
+    let time_diff = (time_1 - time_2);
+    let rate_ratio = (index_1/index_2);
     let time_ratio = rate_ratio/time_diff;
-    return time_ratio * SECONDS_PER_YEAR;
+    return time_ratio * SECONDS_PER_YEAR/1000;
 }
 
 public struct Deposit: ABIFunction {
         public static let name = "deposit"
-        public let contract: EthereumAddress = EthereumAddress("0xE0fBa4Fc209b4948668006B2bE61711b7f465bAe")
+//        public let contract: EthereumAddress = EthereumAddress("0xE0fBa4Fc209b4948668006B2bE61711b7f465bAe")
+        public let contract: EthereumAddress = EthereumAddress("0x9198F13B08E299d85E096929fA9781A1E3d5d827")
+    
         public let from: EthereumAddress? = EthereumAddress("0xb5f62A0473154bb056B8CdBcC9F525B136eB3BbE")
     
         public let asset: EthereumAddress
@@ -238,12 +264,6 @@ class TestEthereumKeyStorage: EthereumKeyStorageProtocol {
     }
 }
 
-struct InterestRateResponse:Decodable {
-    var response:InterestRates
-}
-struct InterestRates:Decodable {
-    var interestRates:[InterestRate]
-}
 struct InterestRate:Decodable {
     var liquidityIndex:BigUInt
     var timestamp:BigUInt
