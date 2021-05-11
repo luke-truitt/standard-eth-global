@@ -12,7 +12,7 @@ import SwiftUI
 struct standard_iosApp: App {
     @State var user: User = User()
     @State var onboardComplete : Bool = false;
-//    @State var user : User = nil
+    @State var current = "Wallet" // TODO - Switch to enum
     
     
     var body: some Scene {
@@ -22,7 +22,16 @@ struct standard_iosApp: App {
                 OnboardingView(onboardComplete: createUser)
             }
             else {
-                WalletView(user: self.user)
+                switch current {
+                case "Wallet":
+                    WalletView(wallet: self.user.wallet, switchView: switchView)
+                case "Buy":
+                    BuyView(switchView: switchView, wallet: self.user.wallet)
+                case "Sell":
+                    SellView(switchView: switchView, wallet: self.user.wallet)
+                default:
+                    WalletView(wallet: self.user.wallet, switchView: switchView)
+                }
             }
         }
         
@@ -32,9 +41,11 @@ struct standard_iosApp: App {
         self.user.name = name
         self.user.email = email
         self.user.phone_number = phone_number
-        print("User Created")
-        print(user)
         onboardComplete = true
+    }
+    
+    func switchView(newView: String){
+        current = newView
     }
 }
 

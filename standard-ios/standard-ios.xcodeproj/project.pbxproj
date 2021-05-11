@@ -22,8 +22,15 @@
 		793D00E2264840BA0052BBE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793D00DE264840BA0052BBE0 /* User.swift */; };
 		793D00E3264840BA0052BBE0 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793D00DF264840BA0052BBE0 /* Wallet.swift */; };
 		793D00E4264840BA0052BBE0 /* WalletEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793D00E0264840BA0052BBE0 /* WalletEvent.swift */; };
+		798485D92648AEB900FEE916 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798485D82648AEB900FEE916 /* BuyView.swift */; };
+		798485DC2648B9DE00FEE916 /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798485DB2648B9DE00FEE916 /* StripeClient.swift */; };
+		798485DE2648BCBB00FEE916 /* PaymentContextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798485DD2648BCBB00FEE916 /* PaymentContextDelegate.swift */; };
+		798485E02649961100FEE916 /* ConfirmAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798485DF2649961100FEE916 /* ConfirmAmountView.swift */; };
+		798485E226499C6000FEE916 /* SellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798485E126499C6000FEE916 /* SellView.swift */; };
 		79951810264732D900488031 /* BankAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995180F264732D900488031 /* BankAccountsView.swift */; };
 		7995181226482C3400488031 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7995181126482C3400488031 /* Podfile */; };
+		79EAD6E3264A57060006E561 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 79EAD6E1264A57050006E561 /* Podfile.lock */; };
+		79EAD6E4264A57060006E561 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAD6E2264A57060006E561 /* Wallet.swift */; };
 		A2858A12AADC2E7B67148DB3 /* Pods_standard_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9641051F6453795A53C9682D /* Pods_standard_iosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,16 +65,22 @@
 		7932FB1A2646CFEA009D14DE /* standard-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "standard-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7932FB1E2646CFEA009D14DE /* standard_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = standard_iosUITests.swift; sourceTree = "<group>"; };
 		7932FB202646CFEA009D14DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7932FB2F2646D878009D14DE /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		7932FB322646DB38009D14DE /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		7932FB34264704B8009D14DE /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		7932FB362647293C009D14DE /* EnterAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAmountView.swift; sourceTree = "<group>"; };
-		793D00DD264840BA0052BBE0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingView.swift; path = "standard-ios/View/OnboardingView.swift"; sourceTree = "<group>"; };
+		793D00DD264840BA0052BBE0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		793D00DE264840BA0052BBE0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		793D00DF264840BA0052BBE0 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		793D00E0264840BA0052BBE0 /* WalletEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletEvent.swift; sourceTree = "<group>"; };
+		798485D82648AEB900FEE916 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
+		798485DB2648B9DE00FEE916 /* StripeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
+		798485DD2648BCBB00FEE916 /* PaymentContextDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentContextDelegate.swift; sourceTree = "<group>"; };
+		798485DF2649961100FEE916 /* ConfirmAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmAmountView.swift; sourceTree = "<group>"; };
+		798485E126499C6000FEE916 /* SellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellView.swift; sourceTree = "<group>"; };
 		7995180F264732D900488031 /* BankAccountsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountsView.swift; sourceTree = "<group>"; };
 		7995181126482C3400488031 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		79EAD6E1264A57050006E561 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		79EAD6E2264A57060006E561 /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		9641051F6453795A53C9682D /* Pods_standard_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_standard_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25E2CD765073E1D8EA5918E /* Pods-standard-ios-standard-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-standard-ios-standard-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-standard-ios-standard-iosUITests/Pods-standard-ios-standard-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A971F402132CA7C4423E8A11 /* Pods_standard_ios_standard_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_standard_ios_standard_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,11 +145,9 @@
 		7932FAF52646CFE5009D14DE = {
 			isa = PBXGroup;
 			children = (
-				793D00DD264840BA0052BBE0 /* OnboardingView.swift */,
-				793D00DE264840BA0052BBE0 /* User.swift */,
-				793D00DF264840BA0052BBE0 /* Wallet.swift */,
-				793D00E0264840BA0052BBE0 /* WalletEvent.swift */,
 				7995181126482C3400488031 /* Podfile */,
+				79EAD6E1264A57050006E561 /* Podfile.lock */,
+				79EAD6E2264A57060006E561 /* Wallet.swift */,
 				7932FB002646CFE5009D14DE /* standard-ios */,
 				7932FB122646CFEA009D14DE /* standard-iosTests */,
 				7932FB1D2646CFEA009D14DE /* standard-iosUITests */,
@@ -159,6 +170,8 @@
 		7932FB002646CFE5009D14DE /* standard-ios */ = {
 			isa = PBXGroup;
 			children = (
+				798485DA2648B9CF00FEE916 /* Util */,
+				79A73B342648A2060091C427 /* Model */,
 				7932FB312646DB28009D14DE /* styles */,
 				7932FB012646CFE5009D14DE /* standard_iosApp.swift */,
 				7932FB2E2646D857009D14DE /* View */,
@@ -198,10 +211,13 @@
 		7932FB2E2646D857009D14DE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7932FB2F2646D878009D14DE /* FormView.swift */,
 				7932FB34264704B8009D14DE /* WalletView.swift */,
+				798485D82648AEB900FEE916 /* BuyView.swift */,
+				798485E126499C6000FEE916 /* SellView.swift */,
+				793D00DD264840BA0052BBE0 /* OnboardingView.swift */,
 				7995180F264732D900488031 /* BankAccountsView.swift */,
 				7932FB362647293C009D14DE /* EnterAmountView.swift */,
+				798485DF2649961100FEE916 /* ConfirmAmountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +228,25 @@
 				7932FB322646DB38009D14DE /* Styles.swift */,
 			);
 			path = styles;
+			sourceTree = "<group>";
+		};
+		798485DA2648B9CF00FEE916 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				798485DB2648B9DE00FEE916 /* StripeClient.swift */,
+				798485DD2648BCBB00FEE916 /* PaymentContextDelegate.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		79A73B342648A2060091C427 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				793D00DE264840BA0052BBE0 /* User.swift */,
+				793D00DF264840BA0052BBE0 /* Wallet.swift */,
+				793D00E0264840BA0052BBE0 /* WalletEvent.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +260,7 @@
 				7932FAFA2646CFE5009D14DE /* Sources */,
 				7932FAFB2646CFE5009D14DE /* Frameworks */,
 				7932FAFC2646CFE5009D14DE /* Resources */,
-				7A67C4518413E4882F5B6775 /* [CP] Embed Pods Frameworks */,
+				18C5D42D49B88DDFCCA5C633 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,7 +301,7 @@
 				7932FB162646CFEA009D14DE /* Sources */,
 				7932FB172646CFEA009D14DE /* Frameworks */,
 				7932FB182646CFEA009D14DE /* Resources */,
-				BA0D648939A70D37D84A6D3F /* [CP] Embed Pods Frameworks */,
+				E6A66E12C21AE0C5F0449E10 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,6 +365,7 @@
 			files = (
 				7995181226482C3400488031 /* Podfile in Resources */,
 				7932FB092646CFE9009D14DE /* Preview Assets.xcassets in Resources */,
+				79EAD6E3264A57060006E561 /* Podfile.lock in Resources */,
 				7932FB062646CFE9009D14DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +387,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18C5D42D49B88DDFCCA5C633 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-standard-ios/Pods-standard-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-standard-ios/Pods-standard-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-standard-ios/Pods-standard-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		233251F8C0B56AA878C960ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,23 +424,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7A67C4518413E4882F5B6775 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-standard-ios/Pods-standard-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-standard-ios/Pods-standard-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-standard-ios/Pods-standard-ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AEAE8E99FFB1EB194CBB2125 /* [CP] Check Pods Manifest.lock */ = {
@@ -412,7 +448,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BA0D648939A70D37D84A6D3F /* [CP] Embed Pods Frameworks */ = {
+		E6A66E12C21AE0C5F0449E10 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -458,15 +494,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79EAD6E4264A57060006E561 /* Wallet.swift in Sources */,
 				793D00E1264840BA0052BBE0 /* OnboardingView.swift in Sources */,
 				793D00E2264840BA0052BBE0 /* User.swift in Sources */,
 				793D00E3264840BA0052BBE0 /* Wallet.swift in Sources */,
+				798485D92648AEB900FEE916 /* BuyView.swift in Sources */,
 				793D00E4264840BA0052BBE0 /* WalletEvent.swift in Sources */,
 				79951810264732D900488031 /* BankAccountsView.swift in Sources */,
 				7932FB372647293C009D14DE /* EnterAmountView.swift in Sources */,
 				7932FB022646CFE5009D14DE /* standard_iosApp.swift in Sources */,
+				798485E02649961100FEE916 /* ConfirmAmountView.swift in Sources */,
 				7932FB332646DB38009D14DE /* Styles.swift in Sources */,
+				798485E226499C6000FEE916 /* SellView.swift in Sources */,
 				7932FB35264704B8009D14DE /* WalletView.swift in Sources */,
+				798485DE2648BCBB00FEE916 /* PaymentContextDelegate.swift in Sources */,
+				798485DC2648B9DE00FEE916 /* StripeClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,8 +666,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"standard-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 42MYQSF5ZL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "standard-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -633,8 +677,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gooneratne.x10host.standard-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fromstandard.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -646,8 +691,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"standard-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 42MYQSF5ZL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "standard-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -655,8 +702,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gooneratne.x10host.standard-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fromstandard.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
