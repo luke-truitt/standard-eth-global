@@ -26,14 +26,18 @@ struct iosApp: App {
     }
     
     func initialize() {
-        calcAvgRate { result in
-            switch result {
-            case .success(let rate):
-                print(rate)
-            case .failure(let err):
-                print(err)
-            }
-        }
+        testDeposit(client: client!)
+//        testWithdraw(client: client!)
+//        testTransfer(client: client!)
+//        testRateCalc()
+//        calcAvgRate { result in
+//            switch result {
+//            case .success(let rate):
+//                print(rate)
+//            case .failure(let err):
+//                print(err)
+//            }
+//        }
 //        let userAddress = EthereumAddress("0xb5f62A0473154bb056B8CdBcC9F525B136eB3BbE")
 //        let user2Address = EthereumAddress("0xCe697A0aF5dA8faB0C13Ba9640488fC8975a3f9B")
 //        let userKey = "36cf2b7d4955842eee79b8c2692dc52c086c2d272c533f80973938c9df491b9f"
@@ -116,6 +120,96 @@ struct iosApp: App {
 //            }
             
 //        })
+    }
+}
+
+func testDeposit(client: EthereumClient) {
+    let userAddress = EthereumAddress("0xb5f62A0473154bb056B8CdBcC9F525B136eB3BbE")
+    let tokenAddress = EthereumAddress("0x001B3B4d0F3714Ca98ba10F6042DaEbF0B1B7b6F")
+    let userKey = "36cf2b7d4955842eee79b8c2692dc52c086c2d272c533f80973938c9df491b9f"
+    var keyStorage = TestEthereumKeyStorage(privateKey: userKey)
+    var account = try! EthereumAccount(keyStorage: keyStorage)
+    client.eth_gasPrice(completion: {(error, price) in
+    print(error)
+    do {
+        let function = Deposit(asset: tokenAddress, amount: BigUInt("1000000"), onBehalfOf: userAddress, referralCode: UInt16(0), gasPrice: price!, gasLimit: BigUInt(600000))
+        let transaction = try function.transaction()
+        client.eth_getTransactionCount(address: userAddress, block: .Latest) { error, count in
+            let tx = EthereumTransaction(from: userAddress, to: transaction.to, value: 0, data: transaction.data, nonce: count, gasPrice: transaction.gasPrice, gasLimit: transaction.gasLimit, chainId: 80001)
+            print(tx)
+            print("big error \(error)")
+            client.eth_sendRawTransaction(tx, withAccount: account) { (bigError, txHash) in
+                print("error is \(bigError)")
+                print("TX Hash: \(txHash)")
+
+            }
+        }
+    } catch let transactionError {
+        print(transactionError.localizedDescription)
+    }
+    })
+
+}
+
+func testWithdraw(client: EthereumClient) {
+    let userAddress = EthereumAddress("0xb5f62A0473154bb056B8CdBcC9F525B136eB3BbE")
+    let tokenAddress = EthereumAddress("0x001B3B4d0F3714Ca98ba10F6042DaEbF0B1B7b6F")
+    let userKey = "36cf2b7d4955842eee79b8c2692dc52c086c2d272c533f80973938c9df491b9f"
+    var keyStorage = TestEthereumKeyStorage(privateKey: userKey)
+    var account = try! EthereumAccount(keyStorage: keyStorage)
+    client.eth_gasPrice(completion: {(error, price) in
+        do {
+            let function = Withdraw(asset: tokenAddress, amount: BigUInt("951825856"), to: userAddress, gasPrice: price!, gasLimit: BigUInt(600000))
+            let transaction = try function.transaction()
+            client.eth_getTransactionCount(address: userAddress, block: .Latest) { error, count in
+                let tx = EthereumTransaction(from: userAddress, to: transaction.to, value: 0, data: transaction.data, nonce: count, gasPrice: transaction.gasPrice, gasLimit: transaction.gasLimit, chainId: 80001)
+                print(tx)
+                print("big error \(error)")
+                client.eth_sendRawTransaction(tx, withAccount: account) { (bigError, txHash) in
+                    print("error is \(bigError)")
+                    print("TX Hash: \(txHash)")
+                }
+            }
+        } catch let transactionError {
+            print(transactionError.localizedDescription)
+        }
+    })
+}
+
+func testTransfer(client: EthereumClient) {
+    let userAddress = EthereumAddress("0xb5f62A0473154bb056B8CdBcC9F525B136eB3BbE")
+    let tokenAddress = EthereumAddress("0x001B3B4d0F3714Ca98ba10F6042DaEbF0B1B7b6F")
+    let user2Address = EthereumAddress("0xCe697A0aF5dA8faB0C13Ba9640488fC8975a3f9B")
+    let userKey = "36cf2b7d4955842eee79b8c2692dc52c086c2d272c533f80973938c9df491b9f"
+    var keyStorage = TestEthereumKeyStorage(privateKey: userKey)
+    var account = try! EthereumAccount(keyStorage: keyStorage)
+    client.eth_gasPrice(completion: {(error, price) in
+        do {
+            let function = transfer(contract: tokenAddress, from: userAddress, to: user2Address, value: "300000000000")
+            let transaction = try function.transaction()
+            client.eth_getTransactionCount(address: userAddress, block: .Latest) { error, count in
+                let tx = EthereumTransaction(from: transaction.from, to: transaction.to, value: 0, data: transaction.data, nonce: count, gasPrice: price!, gasLimit: BigUInt(600000), chainId: 80001)
+            print(tx)
+            print("big error \(error)")
+            client.eth_sendRawTransaction(tx, withAccount: account) { (bigError, txHash) in
+                print("error is \(bigError)")
+                print("TX Hash: \(txHash)")
+        }
+    }
+        } catch let transactionError {
+            print(transactionError.localizedDescription)
+        }
+    })
+}
+
+func testRateCalc() {
+    calcAvgRate { result in
+        switch result {
+        case .success(let rate):
+            print(rate)
+        case .failure(let err):
+            print(err)
+        }
     }
 }
 
